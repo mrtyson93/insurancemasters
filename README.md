@@ -34,7 +34,7 @@ Insurance Master
 
 ## Stakeholders
 
-- A Consumer (Rich kasperowski)
+- Small Business Owner (Rich kasperowski)
   - A usability stakeholder and prospective insured
 - An InsurTech expert
   - An expert in usage of technology within insurance sector
@@ -45,28 +45,28 @@ Insurance Master
 
 - Rich Kasperowski is a small business owner and we would like him to visit our site, assess its perceived usability, assess the GL product offering for his business and provide the InsuranceMasters feedback.
   - Age
-    - ?
+    - 40's
   - Gender
     - Male
   - educational background
-    - ?
+    - Higher education
   - Marital Status
-    - ?
+    - Married
   - Profession
-    - ?
+    - Agile Instructor
   - Work experience years & level of expertise (novice, beginner, intermediate, skilled, advanced)
-    - Years
-    - Level (1-5)
+    - ~25 Years
+    - Advanced Level
   - Where and when will he access GL products on website
-    - ?
+    - Web browser most likely during business hours.
   - His needs
-    - ?
+    - Needs proper liability insurance converage for situatutions such as people infringing on his IP, stealing confidential information, getting sued by a third party, identity theft, libel, property destruction, etc...
   - Motivations
-    - ?
+    - Self preservation
   - Technology and access mechanisms that he regularly uses – desktop, mobile, operating system, browsers, et al
-    - ?
+    - Desktop and laptop mostly, Apple OS. Safari browser.
   - Why would he need insurance and what is he generally looking for?
-    - ?
+    - Immediate, accurate, and competitive liability insurance quotes to protect financial and physical assets, intellectual property, and reputation.
   - Other businesses/interests
 
 ## Product Backlog URL
@@ -75,11 +75,18 @@ Insurance Master
 
 ## Product Backlog Ordering Rationale
 
-**TBD**
+Minimum Viable Product first and then Technology Readiness.
 
 ## Definition of Ready
 
-**TBD**
+- Title
+- User Story Completed
+- Developers all understand what needs to be done
+- Dependencies are all understood and refined
+- No Impediments
+- Business value defined
+- Acceptante Criteria defined
+- Story Points Estimated
 
 ## Whole-team relative-size estimating activity
 
