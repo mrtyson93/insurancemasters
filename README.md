@@ -80,7 +80,7 @@ Minimum Viable Product first and then Technology Readiness.
 ## Definition of Ready
 
 - Title
-- User Story Completed
+- Expressed as User Story
 - Developers all understand what needs to be done
 - Dependencies are all understood and refined
 - No Impediments
@@ -90,4 +90,6 @@ Minimum Viable Product first and then Technology Readiness.
 
 ## Whole-team relative-size estimating activity
 
-**TBD** (note that only developers participated in this)
+Method used was [T-Shirt-Sizes](https://www.c-sharpcorner.com/article/agile-story-point-estimation-techniques-t-shirt-sizing/)
+
+Used points 10, 20, 30, 40, and 50 as the different size options.
