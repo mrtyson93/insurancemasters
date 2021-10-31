@@ -90,6 +90,6 @@ Minimum Viable Product first and then Technology Readiness.
 
 ## Whole-team relative-size estimating activity
 
-Method used was [T-Shirt-Sizes](https://www.c-sharpcorner.com/article/agile-story-point-estimation-techniques-t-shirt-sizing/)
+Method used was [T-Shirt-Sizes](https://www.c-sharpcorner.com/article/agile-story-point-estimation-techniques-t-shirt-sizing/). This activity was only done by the developers.
 
 Used points 10, 20, 30, 40, and 50 as the different size options.
