@@ -44,30 +44,34 @@ Insurance Master
 ## User Persona
 
 - Rich Kasperowski is a small business owner and we would like him to visit our site, assess its perceived usability, assess the GL product offering for his business and provide the InsuranceMasters feedback.
+
   - Age
     - 40's
   - Gender
     - Male
   - educational background
-    - Higher education
+    - Graduate Level Credentials
   - Marital Status
     - Married
   - Profession
-    - Agile Instructor
-  - Work experience years & level of expertise (novice, beginner, intermediate, skilled, advanced)
-    - ~25 Years
-    - Advanced Level
+    - Runs Boutique training and consulting business, no manufacturing. Mostly services, all digital products
+  - Work experience years & level of expertise
+    - 10 years in business, clients rate him 5 /5 he rates himself 4/5 because he thinks there always something to learn and do better
   - Where and when will he access GL products on website
-    - Web browser most likely during business hours.
-  - His needs
-    - Needs proper liability insurance converage for situatutions such as people infringing on his IP, stealing confidential information, getting sued by a third party, identity theft, libel, property destruction, etc...
-  - Motivations
-    - Self preservation
+    - Mac, ipad (safari) are his technical access
+  - Motivation/Needs
+    - Motivation and needs for insurance is that he wants Simple, ran small biz, he had a corporate but too much overhead, so he changed to sole proprietorship. He likes it that there are no accountants, no contract signature, just invoice. He did not have insurance until someone did not pay, regulations about having insurance required him to have insurance. Wants the insurance on the same day, so not worry about loss of customers, have it and show the certificate (proof) of insurance immediately (digital or paper). Does not anticipate a lot of changes to his policy. He has other insurance such as payroll company associated when employee (unemployment insurance), part timers (subcontractors, and perform services on your behalf)
+    - He wants to also make changes right there and now, super simple, do not talk to anyone, digital, certificate to be mailed immediately. Ideally not use fingers and ask SIRI to get insurance, renew, or make changes
+    - Automatic pay monthly
+    - Servicing Aspects - Urgent real time chat or voice for technical questions. If not urgent by email, calling insurance company to talk to somebody
+    - If tomorrow he needs larger coverage, he wants that quick and just as fast
   - Technology and access mechanisms that he regularly uses – desktop, mobile, operating system, browsers, et al
+
     - Desktop and laptop mostly, Apple OS. Safari browser.
-  - Why would he need insurance and what is he generally looking for?
-    - Immediate, accurate, and competitive liability insurance quotes to protect financial and physical assets, intellectual property, and reputation.
-  - Other businesses/interests
+
+  - Other
+    - Revenues <$25m/yr
+    - He uses other insurance for home/car, health insurance, travel insurance, rented a car in Mexico, Morocco (travel insurance)
 
 ## Product Backlog URL
 
