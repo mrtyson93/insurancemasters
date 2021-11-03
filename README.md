@@ -1,6 +1,8 @@
-# insurancemasters
+# **insurancemasters**
 
 Public Repo for insurance masters team CSCI E-71 Fall 2021
+
+# Part 1
 
 ## Team Name
 
@@ -97,3 +99,12 @@ Minimum Viable Product first and then Technology Readiness.
 Method used was [T-Shirt-Sizes](https://www.c-sharpcorner.com/article/agile-story-point-estimation-techniques-t-shirt-sizing/). This activity was only done by the developers.
 
 Used points 10, 20, 30, 40, and 50 as the different size options.
+
+---
+
+# Part 2
+
+## Story Point Forecast
+
+- Forecasted Points: 100 Per Sprint
+- Rationale: There are 290 total points of User Stories planned in our backlog which were planned to complete throughout the semester. There are three sprints so we divided by three and rounded up to an even 100. This will allow us to plan all of the user stories throughout the next three sprints.
