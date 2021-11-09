@@ -18,3 +18,15 @@ def index():
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+@app.route('/state-selection')
+def state_selection():
+    return render_template('state-selection.html')
+
+@app.route('/quote', methods=['POST'] )
+def quote_form():
+    return render_template('quote.html')
+
+@app.route('/result', methods=['POST'] )
+def quote_result():
+    return render_template('result.html')

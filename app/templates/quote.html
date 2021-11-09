@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="breadcrumbs">
+        <div class="container">
+            <a href="./index">Home</a>
+            <span>Get a quote (Questionnaire)</span>
+        </div>
+    </div>
+    <div class="page">
+        <div class="container">
+            <h3 class="entry-title">Get Insurance Liability Today </h3>
+            <p></p>
+             <form action="./result" method="post" class="contact-form">
+                  <div class="row">
+                        <div class="col-md-4"><input type="text" placeholder="First Name"></div>
+                        <div class="col-md-4"><input type="text" placeholder="Last Name"></div>
+                        <div class="col-md-4">&nbsp;</div>
+                  </div>
+                 <div class="row">
+                        <div class="col-md-8"><input type="text" placeholder="Registered Business Name"></div>
+                  </div>
+                 <div class="row">
+                        <div class="col-md-8"><input type="text" placeholder="Optional: d/b/a for the firm"></div>
+                  </div>
+                 <div class="row">
+                        <div class="col-md-8"><input type="text" placeholder="Optional: your business formerly known as"></div>
+                  </div>
+                 <div class="row">
+                        <div class="col-md-4"><input type="text" placeholder="Phone"></div>
+                        <div class="col-md-4"><input type="text" placeholder="Email"></div>
+                  </div>
+                 <div class="row">
+                        <div class="col-md-8"><input type="text" placeholder="Address"></div>
+
+                  </div>
+                 <div class="row">
+                      <div class="col-md-3"><input type="text" placeholder="City"></div>
+                      <div class="col-md-3">State
+                          <select>
+                            <option value="">Please select one</option>
+                            <option value="CA">California</option>
+                            <option value="TX">Texas</option>
+                            <option value="WA">Washington</option>
+                            <option value="FL">Florida</option>
+                            <option value="VA">Virginia</option>
+                          </select>
+                      </div>
+                      <div class="col-md-2"><input type="text" placeholder="Zip Code"></div>
+                 </div>
+
+
+
+                 <p class="text-left">
+                     <input type="submit" value="Submit">
+                 </p>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
