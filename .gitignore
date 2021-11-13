@@ -6,3 +6,4 @@
 .idea/modules.xml
 .idea/vcs.xml
 app/__pycache__/app.cpython-38.pyc
+app/python_logic/__pycache__/*
