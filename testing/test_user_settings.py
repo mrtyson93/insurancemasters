@@ -79,5 +79,5 @@ def test_nav_to_quote_after_continue():
 
     current_url = driver.current_url
 
-    assert current_url.endswith('quote')
+    assert current_url.endswith('quoteaboutyou')
 

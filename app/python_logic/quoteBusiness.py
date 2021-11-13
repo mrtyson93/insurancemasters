@@ -38,7 +38,7 @@ BUSINESS_NATURES = [
   {"value": 4, "text": "Consult in technology, management, legal, education, and associated training"},
 ]
 
-@quotebusiness.route("/quotequoteaboutbusiness", methods=['POST'])
+@quotebusiness.route("/quoteaboutbusiness", methods=['POST'])
 def quotebusiness_load():
 
     return render_template('quotebusiness.html', BUSINESS_SCTRUCTURES=BUSINESS_SCTRUCTURES, BUSINESS_AGES=BUSINESS_AGES, EMPLOYEE_COUNTS=EMPLOYEE_COUNTS, REVENUES=REVENUES, BUSINESS_NATURES=BUSINESS_NATURES)

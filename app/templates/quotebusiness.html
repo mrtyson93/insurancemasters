@@ -30,9 +30,9 @@
         </div>
         <div class="col-md-3">
           Business Age:<span style="color: red">*</span>
-          <select>
+          <select name="select-business-age-dropdown">
             {% for business_age in BUSINESS_AGES %}
-            <option value="{{business_age.value}}">
+            <option value="{{business_age.value}}" name="Age-Option-{{business_age.text}}"">
               {{business_age.text}}
             </option>
             {% endfor %}
@@ -60,9 +60,9 @@
         </div>
         <div class="col-md-4">
           Projected Revenue:<span style="color: red">*</span>
-          <select>
+          <select name="select-projected-rev-dropdown">
             {% for rev in REVENUES %}
-            <option value="{{rev.value}}">{{rev.text}}</option>
+            <option name="{{rev.text}}" value="{{rev.value}}">{{rev.text}}</option>
             {% endfor %}
           </select>
         </div>
@@ -97,7 +97,7 @@
       </div>
 
       <p class="text-left">
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit" name="btn-submit-quote-details"/>
       </p>
     </form>
   </div>
