@@ -1,104 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,maximum-scale=1"
+    />
 
-		<title>Insurance Masters</title>
+    <title>Insurance Masters</title>
 
-		<!-- Loading third party fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|" rel="stylesheet" type="text/css">
-		<link href="{{ url_for('static', filename='./fonts/font-awesome.min.css') }}" rel="stylesheet">
-        <link href="{{ url_for('static', filename='./fonts/lineo-icon/style.css') }}" rel="stylesheet">
+    <!-- Loading third party fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{{ url_for('static', filename='./fonts/font-awesome.min.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='./fonts/lineo-icon/style.css') }}"
+      rel="stylesheet"
+    />
 
+    <!-- Loading main css file -->
+    <link
+      href="{{ url_for('static', filename='./style.css') }}"
+      rel="stylesheet"
+    />
 
-		<!-- Loading main css file -->
-        <link href="{{ url_for('static', filename='./style.css') }}" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="{{ url_for('static', filename='./js/ie-support/html5.js') }}"></script>
+      <script src="{{ url_for('static', filename='./js/ie-support/respond.js') }}"></script>
+    <![endif]-->
+    <script>
+      $(function () {
+        $("#startpicker").datepicker();
+      });
+    </script>
+  </head>
 
+  <body>
+    <div id="site-content">
+      <header class="site-header">
+        <div class="top-header">
+          <div class="container">
+            <a href="./index" id="branding">
+              <img
+                src="{{ url_for('static', filename='./images/logo.png') }}"
+                alt="Company Name"
+                class="logo"
+              />
+              <div class="logo-text">
+                <h1 class="site-title">Insurance Masters</h1>
+                <small class="description">Build Bright Future</small>
+              </div>
+            </a>
+            <!-- #branding -->
 
-		<!--[if lt IE 9]>
-		<script src="{{ url_for('static', filename='./js/ie-support/html5.js') }}"></script>
-        <script src="{{ url_for('static', filename='./js/ie-support/respond.js') }}"></script>
-		<![endif]-->
+            <div class="right-section pull-right">
+              <a href="#" class="phone"
+                ><img
+                  src="{{ url_for('static', filename='./images/icon-phone.png') }}"
+                  class="icon"
+                />+1 888 666 1234</a
+              >
 
-	</head>
+              <form action="#" class="search-form">
+                <input type="text" placeholder="Search..." />
+                <button type="submit">
+                  <img
+                    src="{{ url_for('static', filename='./images/icon-search.png') }}"
+                    alt=""
+                  />
+                </button>
+              </form>
+            </div>
+          </div>
+          <!-- .container -->
+        </div>
+        <!-- .top-header -->
 
+        <div class="bottom-header">
+          <div class="container">
+            <div class="main-navigation">
+              <button type="button" class="menu-toggle">
+                <i class="fa fa-bars"></i>
+              </button>
+              <ul class="menu">
+                <li class="menu-item"><a href="/about">About us</a></li>
+                <li class="menu-item"><a href="#">Contact</a></li>
+              </ul>
+              <!-- .menu -->
+            </div>
+            <!-- .main-navigation -->
 
-	<body>
+            <div class="social-links">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-google-plus"></i></a>
+              <a href="#"><i class="fa fa-pinterest"></i></a>
+            </div>
 
-		<div id="site-content">
-			<header class="site-header">
-				<div class="top-header">
-					<div class="container">
-						<a href="./index" id="branding">
-							<img src="{{ url_for('static', filename='./images/logo.png') }}" alt="Company Name" class="logo">
-							<div class="logo-text">
-								<h1 class="site-title">Insurance Masters</h1>
-								<small class="description">Build Bright Future</small>
-							</div>
-						</a> <!-- #branding -->
+            <div class="mobile-navigation"></div>
+          </div>
+        </div>
+      </header>
+      <!-- .site-header -->
+      {% block landing %} {% endblock %}
 
-						<div class="right-section pull-right">
-							<a href="#" class="phone"><img src="{{ url_for('static', filename='./images/icon-phone.png') }}" class="icon">+1 888 666 1234</a>
+      <main class="main-content">{% block content %} {% endblock %}</main>
 
-							<form action="#" class="search-form">
-								<input type="text" placeholder="Search...">
-								<button type="submit"><img src="{{ url_for('static', filename='./images/icon-search.png') }}" alt=""></button>
-							</form>
-						</div>
-					</div> <!-- .container -->
-				</div> <!-- .top-header -->
+      <div class="site-footer">
+        <div class="bottom-footer">
+          <div class="container">
+            <nav class="footer-navigation">
+              <a href="./index">Home</a>
+              <a href="./about">About us</a>
+              <a href="#">Contact</a>
+            </nav>
 
+            <div class="colophon">
+              Copyright 2021 Insurance Masters. Designed by Themezy. All rights
+              reserved.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-				<div class="bottom-header">
-					<div class="container">
-						<div class="main-navigation">
-							<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
-							<ul class="menu">
-								<li class="menu-item"><a href="/about">About us</a></li>
-								<li class="menu-item"><a href="#">Contact</a></li>
-							</ul> <!-- .menu -->
-						</div> <!-- .main-navigation -->
-
-						<div class="social-links">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-google-plus"></i></a>
-							<a href="#"><i class="fa fa-pinterest"></i></a>
-						</div>
-
-						<div class="mobile-navigation"></div>
-					</div>
-				</div>
-
-			</header> <!-- .site-header -->
-				{% block landing %}
-                {% endblock %}
-
-			<main class="main-content">
-                {% block content %}
-                {% endblock %}
-            </main>
-
-			<div class="site-footer">
-
-				<div class="bottom-footer">
-					<div class="container">
-						<nav class="footer-navigation">
-							<a href="./index">Home</a>
-							<a href="./about">About us</a>
-							<a href="#">Contact</a>
-						</nav>
-
-						<div class="colophon">Copyright 2021 Insurance Masters. Designed by Themezy. All rights reserved.</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<script src="{{ url_for('static', filename='./js/jquery-1.11.1.min.js') }}"></script>
-		<script src="{{ url_for('static', filename='./js/plugins.js') }}"></script>
-		<script src="{{ url_for('static', filename='./js/app.js') }}"></script>
-
-	</body>
+    <script src="{{ url_for('static', filename='./js/jquery-1.11.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='./js/plugins.js') }}"></script>
+    <script src="{{ url_for('static', filename='./js/app.js') }}"></script>
+  </body>
+</html>

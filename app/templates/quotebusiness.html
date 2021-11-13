@@ -1,0 +1,106 @@
+{% extends "layout.html" %} {% block content %}
+<div class="breadcrumbs">
+  <div class="container">
+    <a href="./index">Home</a>
+    <span>Get a quote (Questionnaire)</span>
+  </div>
+</div>
+<div class="page">
+  <div class="container">
+    <h3 class="entry-title">Get Insurance Liability Today</h3>
+    <p></p>
+    <form action="./../result" method="post" class="contact-form">
+      <div class="row">
+        <h4 class="entry-title"><b>About Your Business</b></h4>
+      </div>
+      <div class="row">
+        <span class="col-md-4" style="color: red">* = Required</span>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          Business Structure:<span style="color: red">*</span>
+          <select>
+            {% for business_sctructure in BUSINESS_SCTRUCTURES %}
+            <option value="{{business_sctructure.value}}">
+              {{business_sctructure.text}}
+            </option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="col-md-3">
+          Business Age:<span style="color: red">*</span>
+          <select>
+            {% for business_age in BUSINESS_AGES %}
+            <option value="{{business_age.value}}">
+              {{business_age.text}}
+            </option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="col-md-3">
+          Employee Count:<span style="color: red">*</span>
+          <select>
+            {% for employee_count in EMPLOYEE_COUNTS %}
+            <option value="{{employee_count.value}}">
+              {{employee_count.text}}
+            </option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          Last Years Revenue:<span style="color: red">*</span>
+          <select>
+            {% for rev in REVENUES %}
+            <option value="{{rev.value}}">{{rev.text}}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="col-md-4">
+          Projected Revenue:<span style="color: red">*</span>
+          <select>
+            {% for rev in REVENUES %}
+            <option value="{{rev.value}}">{{rev.text}}</option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          Business Nature:<span style="color: red">*</span>
+          <select>
+            {% for nature in BUSINESS_NATURES %}
+            <option value="{{nature.value}}">{{nature.text}}</option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          Coverage Start Date (Must be 30 days from now or later):<span
+            style="color: red"
+            >*</span
+          >
+          <div id="rangepicker">
+            <input
+              type="text"
+              id="startpicker"
+              placeholder="mm/dd/yyyy"
+              pattern="(0[1-9]|1[012])[-
+            /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d"
+              title="mm/dd/yyyy"
+            />
+          </div>
+        </div>
+      </div>
+
+      <p class="text-left">
+        <input type="submit" value="Submit" />
+      </p>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
