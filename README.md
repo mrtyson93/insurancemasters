@@ -104,6 +104,8 @@ Used points 10, 20, 30, 40, and 50 as the different size options.
 
 # Part 2
 
+- **Note**: All User Stories are expressed as user stories if you click into the details of a PBI. The titles of the PBIs are shorter on the backlog for brevities sake.
+
 - **Forecasted Points**: 100 Points Per Sprint
 - **Rationale**: There are 270 total points of User Stories planned in our backlog which are planned to complete throughout the semester. There are three sprints so we divided by three and rounded up to an even 100. This will allow us to plan all of the user stories throughout the next three sprints.
 
@@ -112,11 +114,13 @@ Used points 10, 20, 30, 40, and 50 as the different size options.
 - All stories are less than half of our current forecast.
 - User stories were decomposed into tasks, in our Miro board, red items are tasks, and blue items are user stories as outlined by the key.
 
-- Kanban board link: [Miro Board](https://miro.com/app/board/o9J_lnCeYTY=/?invite_link_id=692868496345)
+- **Kanban board link**: [Miro Board](https://miro.com/app/board/o9J_lnCeYTY=/?invite_link_id=692868496345)
 
-- Burndown chart is also on the same Miro Board: [Miro Board](https://miro.com/app/board/o9J_lnCeYTY=/?invite_link_id=692868496345) Miro doesnt keep the formatting of the burndown chart line so here are progressive screenshotts of it ![Alt text](/Sprint1/kanban1.png?raw=true) ![Alt text](/Sprint1/kanban2.png?raw=true) ![Alt text](/Sprint1/kanban3.png?raw=true)
+- **Burndown chart**: Also on the same Miro Board: [Miro Board](https://miro.com/app/board/o9J_lnCeYTY=/?invite_link_id=692868496345) Miro doesnt keep the formatting of the burndown chart line so here are progressive screenshots of it ![Alt text](/Sprint1/kanban1.png?raw=true) ![Alt text](/Sprint1/kanban2.png?raw=true) ![Alt text](/Sprint1/kanban3.png?raw=true)
 
-- **Daily Scrums**: Scrums were completed in our slack channel due to time constraints of people being located around the world. Documentation of each days minutes are located in the minutes folder of our github repo. [Minutes](https://github.com/mrtyson93/insurancemasters/tree/main/minutes)
+- **Daily Scrums**: Scrums were completed in our slack channel when not able to meet on weekends due to time constraints of people being located around the world. Documentation of each days minutes are located in the minutes folder of our github repo. These minutes include what everyone did, what they plan to do, and what the impediments were, if any.[Minutes](https://github.com/mrtyson93/insurancemasters/tree/main/minutes) Here is a link directly to one days documentation of a scrum meeting: [Nov 11](https://github.com/mrtyson93/insurancemasters/blob/main/minutes/11%20Nov%20-%20daily%20scrum.docx)
+
+- **Impediment Removal Plan**: Swarm the impediment as a team to come up with a solution or workaround to unblock the impediment.
 
 - **Sprint board update and Burndown Updates**: Screenshots of burndown updates are above. Screenshots of board below. ![Alt text](/Sprint1/backlog1.png?raw=true) ![Alt text](/Sprint1/backlog2.png?raw=true) ![Alt text](/Sprint1/backlog3.png?raw=true)
 
@@ -124,16 +128,17 @@ Used points 10, 20, 30, 40, and 50 as the different size options.
 
 - **Tests**: The tests are built using selenium and are in the testing folder at [Testing](https://github.com/mrtyson93/insurancemasters/tree/main/testing). A screeenshot of the 10 successful tests are below. ![Alt text](/Sprint1/tests.png?raw=true)
 
-- **Sprint Review**: Decision made: Database creation is required really for the retrieval of the information using the email. It is not required for form page. Can be moved to next sprint PBI for revisiting quotation
+- **Sprint Review**: Part 1 held on 11/14 without stakeholder. Decision made: Database creation task is required for the retrieval of the information using the email. It is not required for form page. Moving to next sprint PBI for revisiting quotation. Part 2 held on 11/15 with the stakeholder.
 
-- **Working Software**: Link to Insurance Masters: [Insurance Masters](https://insurancemaster.herokuapp.com/)
+- **Working Software**: Link to Insurance Masters: [Insurance Masters](https://insurancemaster.herokuapp.com/) Screenshot Proof:
+  ![Alt text](/Sprint1/websiteproof.png?raw=true)
 
 - **Stakeholder attending Sprint Review Proof**: TBD
-- **Sprint Retro:**
-  - initial ideas are KT with selenium user testing so others can complete
-  - Come up with definition of done
+- **Sprint Retro Actions:**
+  - KT with selenium user testing so others can better know the technology and help with it. (This is in the backlog)
+  - Come up with definition of done (We completed this in the retro and moved it to completed because we thought it was important to do quickly.)
 
--**Other**: We as a team came up with a Definition of Done so that we know when we can close a user Story. Definition is:
+-**Other**: We came up with a Definition of Done after the retro so that we know when we can close a user Story. Definition is:
 
 - All related backlog items to user story are done
 - Product owner approval
