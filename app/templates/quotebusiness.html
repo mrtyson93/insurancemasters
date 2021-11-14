@@ -1,3 +1,4 @@
+<script src="{{ url_for('static', filename='js/quotebusiness.js') }}" defer></script>
 {% extends "layout.html" %} {% block content %}
 <div class="breadcrumbs">
   <div class="container">
@@ -70,11 +71,22 @@
       <div class="row">
         <div class="col-md-4">
           Business Nature:<span style="color: red">*</span>
-          <select>
+          <select id="businessNatureSelect" onchange="displayOptionTextField()">
             {% for nature in BUSINESS_NATURES %}
             <option value="{{nature.value}}">{{nature.text}}</option>
             {% endfor %}
           </select>
+        </div>
+      </div>
+      <div class="row" id="optionalBusinessNatureRow" style="display: none;">
+        <div class="col-md-4">
+          <input
+            type="text"
+            placeholder="Other Business Nature"
+            name="txt-field-other-business-nature"
+            required
+            maxlength="80"
+          />
         </div>
       </div>
       <div class="row">
@@ -91,6 +103,8 @@
               pattern="(0[1-9]|1[012])[-
             /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d"
               title="mm/dd/yyyy"
+              required
+              maxlength="10"
             />
           </div>
         </div>

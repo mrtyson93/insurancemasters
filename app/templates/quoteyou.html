@@ -23,6 +23,8 @@
             type="text"
             placeholder="First Name"
             name="txt-field-first-name"
+            required
+            maxlength="32"
           />
         </div>
         <div class="col-md-4">
@@ -31,6 +33,8 @@
             type="text"
             placeholder="Last Name"
             name="txt-field-last-name"
+            required
+            maxlength="32"
           />
         </div>
         <div class="col-md-4">&nbsp;</div>
@@ -38,27 +42,36 @@
       <div class="row">
         <div class="col-md-8">
           <span class="col-md-4" style="color: red">*</span>
-          <input type="text" placeholder="Registered Business Name" />
+          <input
+            type="text"
+            placeholder="Registered Business Name"
+            required
+            maxlength="80"
+          />
         </div>
       </div>
       <div class="row">
         <div class="col-md-8">
-          <input type="text" placeholder="Firm d/b/a" />
+          <input type="text" placeholder="Firm d/b/a" maxlength="80" />
         </div>
       </div>
       <div class="row">
         <div class="col-md-8">
-          <input type="text" placeholder="Your business formerly known as" />
+          <input
+            type="text"
+            placeholder="Your business formerly known as"
+            maxlength="80"
+          />
         </div>
       </div>
       <div class="row">
         <div class="col-md-4">
           <span class="col-md-4" style="color: red">*</span>
-          <input type="text" placeholder="Phone" />
+          <input type="text" placeholder="Phone" required maxlength="15" />
         </div>
         <div class="col-md-4">
           <span class="col-md-4" style="color: red">*</span>
-          <input type="text" placeholder="Email" />
+          <input type="text" placeholder="Email" required maxlength="50" />
         </div>
       </div>
       <div class="row">
@@ -79,11 +92,15 @@
             type="text"
             placeholder="Business Address"
             name="txt-field-address"
+            required
+            maxlength="80"
           />
         </div>
       </div>
       <div class="row">
-        <div class="col-md-3"><input type="text" placeholder="City" /></div>
+        <div class="col-md-3">
+          <input type="text" placeholder="City" required maxlength="32" />
+        </div>
         <div class="col-md-3">
           State
           <select>
@@ -96,7 +113,7 @@
           </select>
         </div>
         <div class="col-md-2">
-          <input type="text" placeholder="Zip Code" />
+          <input type="text" placeholder="Zip Code" required maxlength="5" />
         </div>
       </div>
       <p class="text-left">
