@@ -104,16 +104,16 @@ Used points 10, 20, 30, 40, and 50 as the different size options.
 
 # Part 2
 
-- Forecasted Points: 100 Points Per Sprint
-- Rationale: There are 270 total points of User Stories planned in our backlog which are planned to complete throughout the semester. There are three sprints so we divided by three and rounded up to an even 100. This will allow us to plan all of the user stories throughout the next three sprints.
+- **Forecasted Points**: 100 Points Per Sprint
+- **Rationale**: There are 270 total points of User Stories planned in our backlog which are planned to complete throughout the semester. There are three sprints so we divided by three and rounded up to an even 100. This will allow us to plan all of the user stories throughout the next three sprints.
 
-- Stories into backlog: Our backlog is ordered in terms of what needs to get done first, we, the developers, pulled the maximum stories into our sprint from the top of the backlog that did not exceed our forecasted points.
+- **Stories pulled into backlog**: Our backlog is ordered in terms of what needs to get done first, we, the developers, pulled the maximum stories into our sprint from the top of the backlog that did not exceed our forecasted points.
 
 - All stories are less than half of our current forecast.
 - User stories were decomposed into tasks, in our Miro board, red items are tasks, and blue items are user stories as outlined by the key.
 
 - Kanban board link: [Miro Board](https://miro.com/app/board/o9J_lnCeYTY=/?invite_link_id=692868496345)
 
-- Burndown chart is also on the same Miro Board: [Miro Board](https://miro.com/app/board/o9J_lnCeYTY=/?invite_link_id=692868496345)
+- Burndown chart is also on the same Miro Board: [Miro Board](https://miro.com/app/board/o9J_lnCeYTY=/?invite_link_id=692868496345) Miro doesnt keep the formatting of the burndown chart line so here are progressive screenshotts of it ![Alt text](/Sprint1/kanban1.png?raw=true) ![Alt text](/Sprint1/kanban2.png?raw=true) ![Alt text](/Sprint1/kanban3.png?raw=true)
 
 - Daily Scrums were completed in our slack channel due to time constraints of people being located around the world. Documentation of each days minutes are located in the minutes folder of our github repo. [Minutes](https://github.com/mrtyson93/insurancemasters/tree/main/minutes)
