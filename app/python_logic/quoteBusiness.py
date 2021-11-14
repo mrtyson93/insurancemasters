@@ -36,6 +36,7 @@ BUSINESS_NATURES = [
   {"value": 2, "text": "Sales or business development"},
   {"value": 3, "text": "Consult in agriculture, medical, aerospace, environmental, oil/gas"},
   {"value": 4, "text": "Consult in technology, management, legal, education, and associated training"},
+  {"value": 5, "text": "Other"},
 ]
 
 @quotebusiness.route("/quoteaboutbusiness", methods=['POST'])
