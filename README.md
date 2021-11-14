@@ -123,3 +123,20 @@ Used points 10, 20, 30, 40, and 50 as the different size options.
 - **Pair programming evidence**: ![Alt text](/Sprint1/pairprogram1.png?raw=true) ![Alt text](/Sprint1/pairprogram2.png?raw=true)
 
 - **Tests**: The tests are built using selenium and are in the testing folder at [Testing](https://github.com/mrtyson93/insurancemasters/tree/main/testing). A screeenshot of the 10 successful tests are below. ![Alt text](/Sprint1/tests.png?raw=true)
+
+- **Sprint Review**: Decision made: Database creation is required really for the retrieval of the information using the email. It is not required for form page. Can be moved to next sprint PBI for revisiting quotation
+
+- **Working Software**: Link to Insurance Masters: [Insurance Masters](https://insurancemaster.herokuapp.com/)
+
+- **Stakeholder attending Sprint Review Proof**: TBD
+- **Sprint Retro:**
+  - initial ideas are KT with selenium user testing so others can complete
+  - Come up with definition of done
+
+-**Other**: We as a team came up with a Definition of Done so that we know when we can close a user Story. Definition is:
+
+- All related backlog items to user story are done
+- Product owner approval
+- Acceptance criteria met for each story
+- New unit tests passed
+- No bugs introduced, all prior tests still pass
