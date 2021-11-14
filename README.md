@@ -116,4 +116,10 @@ Used points 10, 20, 30, 40, and 50 as the different size options.
 
 - Burndown chart is also on the same Miro Board: [Miro Board](https://miro.com/app/board/o9J_lnCeYTY=/?invite_link_id=692868496345) Miro doesnt keep the formatting of the burndown chart line so here are progressive screenshotts of it ![Alt text](/Sprint1/kanban1.png?raw=true) ![Alt text](/Sprint1/kanban2.png?raw=true) ![Alt text](/Sprint1/kanban3.png?raw=true)
 
-- Daily Scrums were completed in our slack channel due to time constraints of people being located around the world. Documentation of each days minutes are located in the minutes folder of our github repo. [Minutes](https://github.com/mrtyson93/insurancemasters/tree/main/minutes)
+- **Daily Scrums**: Scrums were completed in our slack channel due to time constraints of people being located around the world. Documentation of each days minutes are located in the minutes folder of our github repo. [Minutes](https://github.com/mrtyson93/insurancemasters/tree/main/minutes)
+
+- **Sprint board update and Burndown Updates**: Screenshots of burndown updates are above. Screenshots of board below. ![Alt text](/Sprint1/backlog1.png?raw=true) ![Alt text](/Sprint1/backlog2.png?raw=true) ![Alt text](/Sprint1/backlog3.png?raw=true)
+
+- **Pair programming evidence**: ![Alt text](/Sprint1/pairprogram1.png?raw=true) ![Alt text](/Sprint1/pairprogram2.png?raw=true)
+
+- **Tests**: The tests are built using selenium and are in the testing folder at [Testing](https://github.com/mrtyson93/insurancemasters/tree/main/testing). A screeenshot of the 10 successful tests are below. ![Alt text](/Sprint1/tests.png?raw=true)
