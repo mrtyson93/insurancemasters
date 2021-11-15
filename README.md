@@ -133,8 +133,11 @@ Used points 10, 20, 30, 40, and 50 as the different size options.
 - **Working Software**: Link to Insurance Masters: [Insurance Masters](https://insurancemaster.herokuapp.com/) Screenshot Proof:
   ![Alt text](/Sprint1/websiteproof.png?raw=true)
 
-- **Stakeholder attending Sprint Review Proof**: TBD
+- **Stakeholder attending Sprint Review Proof**: ![Alt text](/Sprint1/stakeholderproof.png?raw=true)
 - **Sprint Retro Actions:**
+  - Populate latin text with real text
+  - Update User Stories to be more user story accurate
+  - Take out unused functionality
   - KT with selenium user testing so others can better know the technology and help with it. (This is in the backlog)
   - Come up with definition of done (We completed this in the retro and moved it to completed because we thought it was important to do quickly.)
 
