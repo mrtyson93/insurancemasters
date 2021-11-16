@@ -5,5 +5,5 @@ result = Blueprint(
 
 @result.route("/result", methods=['POST'])
 def result_load():
-
+    #do logic here
     return render_template('result.html')
