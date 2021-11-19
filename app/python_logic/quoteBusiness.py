@@ -10,17 +10,17 @@ BUSINESS_SCTRUCTURES = [
 ]
 
 BUSINESS_AGES = [
-  {"value": 0.5, "text": "Less than a year"},
-  {"value": 5, "text": "1-5 Years"},
-  {"value": 20, "text": "6-20 Years"},
-  {"value": 25, "text": "20+ Years"},
+  {"value": "0.5", "text": "Less than a year"},
+  {"value": "5", "text": "1-5 Years"},
+  {"value": "20", "text": "6-20 Years"},
+  {"value": "25", "text": "20+ Years"},
 ]
 
 EMPLOYEE_COUNTS = [
-  {"value": 1, "text": "1"},
-  {"value": 5, "text": "2-5"},
-  {"value": 25, "text": "6-25"},
-  {"value": 50, "text": "25+"},
+  {"value": "1", "text": "1"},
+  {"value": "5", "text": "2-5"},
+  {"value": "25", "text": "6-25"},
+  {"value": "50", "text": "25+"},
 ]
 
 REVENUES = [
