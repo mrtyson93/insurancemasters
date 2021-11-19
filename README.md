@@ -126,7 +126,7 @@ Used points 10, 20, 30, 40, and 50 as the different size options.
 
 - **Pair programming evidence**: ![Alt text](/Sprint1/pairprogram1.png?raw=true) ![Alt text](/Sprint1/pairprogram2.png?raw=true)
 
-- **Tests**: The tests are built using selenium and are in the testing folder at [Testing](https://github.com/mrtyson93/insurancemasters/tree/main/testing). A screeenshot of the 10 successful tests are below. ![Alt text](/Sprint1/tests.png?raw=true)
+- **Tests**: The tests are built using selenium and are in the testing folder at [Testing](https://github.com/mrtyson93/insurancemasters/tree/main/testing). A screeenshot of the 10 successful unit tests are below. ![Alt text](/Sprint1/tests.png?raw=true)
 
 - **Sprint Review**: Part 1 held on 11/14 without stakeholder. Decision made: Database creation task is required for the retrieval of the information using the email. It is not required for form page. Moving to next sprint PBI for revisiting quotation. Part 2 held on 11/15 with the stakeholder.
 
