@@ -1,4 +1,4 @@
-<script src="{{ url_for('static', filename='js/quotebusiness.js') }}" defer></script>
+
 {% extends "layout.html" %} {% block content %}
 <div class="breadcrumbs">
   <div class="container">
@@ -23,7 +23,7 @@
       <div class="row">
         <div class="col-md-4">
           Business Structure:<span style="color: red">*</span>
-          <select>
+          <select name="business_structures">
             {% for business_sctructure in BUSINESS_SCTRUCTURES %}
             <option value="{{business_sctructure.value}}">
               {{business_sctructure.text}}
@@ -33,7 +33,7 @@
         </div>
         <div class="col-md-3">
           Business Age:<span style="color: red">*</span>
-          <select name="select-business-age-dropdown">
+          <select name="business_ages">
             {% for business_age in BUSINESS_AGES %}
             <option value="{{business_age.value}}" name="Age-Option-{{business_age.text}}"">
               {{business_age.text}}
@@ -43,7 +43,7 @@
         </div>
         <div class="col-md-3">
           Employee Count:<span style="color: red">*</span>
-          <select>
+          <select name="employee_counts">
             {% for employee_count in EMPLOYEE_COUNTS %}
             <option value="{{employee_count.value}}">
               {{employee_count.text}}
@@ -55,7 +55,7 @@
       <div class="row">
         <div class="col-md-4">
           Last Years Revenue:<span style="color: red">*</span>
-          <select>
+          <select name="revenues_last_year">
             {% for rev in REVENUES %}
             <option value="{{rev.value}}">{{rev.text}}</option>
             {% endfor %}
@@ -63,7 +63,7 @@
         </div>
         <div class="col-md-4">
           Projected Revenue:<span style="color: red">*</span>
-          <select name="select-projected-rev-dropdown">
+          <select name="revenues">
             {% for rev in REVENUES %}
             <option name="{{rev.text}}" value="{{rev.value}}">{{rev.text}}</option>
             {% endfor %}
@@ -73,7 +73,7 @@
       <div class="row">
         <div class="col-md-4">
           Business Nature:<span style="color: red">*</span>
-          <select id="businessNatureSelect" onchange="displayOptionTextField()">
+          <select id="business_natures" name="business_natures" onchange="displayOptionTextField()">
             {% for nature in BUSINESS_NATURES %}
             <option value="{{nature.value}}">{{nature.text}}</option>
             {% endfor %}
@@ -120,3 +120,13 @@
 </div>
 
 {% endblock %}
+{% block footer %}
+<script src="{{ url_for('static', filename='js/jquery-ui-1.11.1-min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/quotebusiness.js') }}" defer></script>
+   <script>
+      $(function () {
+        $("#startpicker").datepicker();
+      });
+    </script>
+{% endblock %}
+

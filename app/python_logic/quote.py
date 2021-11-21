@@ -1,7 +1,7 @@
-DO_NOT_INSURE = 10000
+DO_NOT_INSURE = 0
 
 
-class Quote(object):
+class InsuranceQuote(object):
 
     def __init__(self, questions):
         self.questions = questions
@@ -32,7 +32,45 @@ class Quote(object):
                 elif question.value == "25":
                     question.factor = 1.2
                 else:
-                    question.factor = DO_NOT_INSURE # we do not insure, so use
+                    question.factor = DO_NOT_INSURE  # we do not insure
+            if question.structure_name == "REVENUES":
+                if question.value == "1":
+                    question.factor = 1
+                elif question.value == "10":
+                    question.factor = 1.05
+                elif question.value == "100":
+                    question.factor = 1.1
+                elif question.value == "1000":
+                    question.factor = 1.15
+                else:
+                    question.factor = DO_NOT_INSURE  # we do not insure
+            if question.structure_name == "BUSINESS_NATURES":
+                if question.value == "1":
+                    question.factor = 1.1
+                elif question.value == "2":
+                    question.factor = 0.7
+                elif question.value == "3":
+                    question.factor = 0.9
+                elif question.value == "4":
+                    question.factor = 0.8
+                else:
+                    question.factor = 1
+            if question.structure_name == "DEDUCTIBLE_OPTIONS":
+                if question.value == "1":
+                    question.factor = 1
+                elif question.value == "2":
+                    question.factor = 0.9
+                elif question.value == "3":
+                    question.factor = 0.8
+                else:
+                    question.factor = 0.75
+            if question.structure_name == "COVERAGE_PER_INCIDENT_OPTIONS":
+                if question.value == "1":
+                    question.factor = 1
+                elif question.value == "2":
+                    question.factor = 0.9
+                else:
+                    question.factor = 0.75
 
 
 class Question:

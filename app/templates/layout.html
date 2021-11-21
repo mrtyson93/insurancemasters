@@ -31,15 +31,16 @@
       rel="stylesheet"
     />
 
+     <link
+      href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css"
+      rel="stylesheet"
+    />
+
     <!--[if lt IE 9]>
       <script src="{{ url_for('static', filename='./js/ie-support/html5.js') }}"></script>
       <script src="{{ url_for('static', filename='./js/ie-support/respond.js') }}"></script>
     <![endif]-->
-    <script>
-      $(function () {
-        $("#startpicker").datepicker();
-      });
-    </script>
+
   </head>
 
   <body>
@@ -127,5 +128,6 @@
     <script src="{{ url_for('static', filename='./js/jquery-1.11.1.min.js') }}"></script>
     <script src="{{ url_for('static', filename='./js/plugins.js') }}"></script>
     <script src="{{ url_for('static', filename='./js/app.js') }}"></script>
+  {% block footer %} {% endblock %}
   </body>
 </html>
