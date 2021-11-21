@@ -6,7 +6,5 @@
       }
     }
   },
-  "scripts": {
-    "postdeploy": "python -m unittest python_logic/test_quote.py"
-  }
+  "success_url": "/index"
 }
