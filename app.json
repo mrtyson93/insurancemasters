@@ -4,7 +4,16 @@
       "scripts": {
         "test": "python -m unittest python_logic/test_quote.py"
       }
+    },
+    "production": {
+      "scripts": {
+        "test": "python -m unittest python_logic/test_quote.py"
+      }
+    },
+    "insurancemaster": {
+      "scripts": {
+        "test": "python -m unittest python_logic/test_quote.py"
+      }
     }
-  },
-  "success_url": "/noting"
+  }
 }
