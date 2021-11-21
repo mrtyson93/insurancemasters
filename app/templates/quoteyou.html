@@ -13,7 +13,7 @@
     <p></p>
     <form action="./quoteaboutbusiness" method="post" class="contact-form">
       <div class="row">
-        <h4 class="entry-title"><b>About You</b></h4>
+        <h4 class="entry-title"><b>About Your Business </b></h4>
       </div>
       <div class="row">
         <span class="col-md-4" style="color: red">* = Required</span>
@@ -76,7 +76,7 @@
           <input type="text" placeholder="Email" required maxlength="50" />
         </div>
       </div>
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-md-8">
           Are you currently insured?
           <span style="color: red">*</span>
@@ -86,7 +86,7 @@
             <option value="No">No</option>
           </select>
         </div>
-      </div>
+      </div> -->
       <div class="row">
         <div class="col-md-8">
           <span class="col-md-4" style="color: red">*</span
@@ -115,7 +115,12 @@
           </select>
         </div>
         <div class="col-md-2">
-          <input type="text" placeholder="Zip Code" required maxlength="5" />
+          <input
+            type="text"
+            placeholder="12345-6789"
+            required
+            pattern="^[0-9]{5}(?:-[0-9]{4})?$"
+          />
         </div>
       </div>
       <p class="text-left">
