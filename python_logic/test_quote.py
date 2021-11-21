@@ -8,7 +8,7 @@ class TestQuote(unittest.TestCase):
         questions = [Question("BUSINESS_SCTRUCTURES", "soleproprietorship", 1)]
         quote = InsuranceQuote(questions)
         quote.render_quote()
-        self.assertEqual(1.5, questions[0].factor)
+        self.assertEqual(99, questions[0].factor)
 
     def test_business_structure_llc(self):
         questions = [Question("BUSINESS_SCTRUCTURES", "llc", 1)]
