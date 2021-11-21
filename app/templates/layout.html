@@ -31,7 +31,7 @@
       rel="stylesheet"
     />
 
-     <link
+    <link
       href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css"
       rel="stylesheet"
     />
@@ -40,7 +40,6 @@
       <script src="{{ url_for('static', filename='./js/ie-support/html5.js') }}"></script>
       <script src="{{ url_for('static', filename='./js/ie-support/respond.js') }}"></script>
     <![endif]-->
-
   </head>
 
   <body>
@@ -92,7 +91,7 @@
               </button>
               <ul class="menu">
                 <!-- <li class="menu-item"><a href="/about">About us</a></li> -->
-                <li class="menu-item"><a href="/contact">Contact</a></li>
+                <li class="menu-item"><a href="/contact">Contact Us</a></li>
               </ul>
               <!-- .menu -->
             </div>
@@ -113,7 +112,7 @@
             <nav class="footer-navigation">
               <a href="./index">Home</a>
               <!-- <a href="./about">About us</a> -->
-              <a href="/contact">Contact</a>
+              <a href="/contact">Contact Us</a>
             </nav>
 
             <div class="colophon">
@@ -128,6 +127,6 @@
     <script src="{{ url_for('static', filename='./js/jquery-1.11.1.min.js') }}"></script>
     <script src="{{ url_for('static', filename='./js/plugins.js') }}"></script>
     <script src="{{ url_for('static', filename='./js/app.js') }}"></script>
-  {% block footer %} {% endblock %}
+    {% block footer %} {% endblock %}
   </body>
 </html>
