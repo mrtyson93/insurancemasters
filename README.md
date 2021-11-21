@@ -116,24 +116,24 @@ Used points 10, 20, 30, 40, and 50 as the different size options.
 
 - **Kanban board link**: [Miro Board](https://miro.com/app/board/o9J_lnCeYTY=/?invite_link_id=692868496345)
 
-- **Burndown chart**: Also on the same Miro Board: [Miro Board](https://miro.com/app/board/o9J_lnCeYTY=/?invite_link_id=692868496345) Miro doesnt keep the formatting of the burndown chart line so here are progressive screenshots of it ![Alt text](/Sprint1/kanban1.png?raw=true) ![Alt text](/Sprint1/kanban2.png?raw=true) ![Alt text](/Sprint1/kanban3.png?raw=true)
+- **Burndown chart**: Also on the same Miro Board: [Miro Board](https://miro.com/app/board/o9J_lnCeYTY=/?invite_link_id=692868496345) Miro doesnt keep the formatting of the burndown chart line so here are progressive screenshots of it ![Alt text](/ProjectManagement/Sprint1/kanban1.png?raw=true) ![Alt text](/Sprint1/kanban2.png?raw=true) ![Alt text](/ProjectManagement/Sprint1/kanban3.png?raw=true)
 
-- **Daily Scrums**: Scrums were completed in our slack channel when not able to meet on weekends due to time constraints of people being located around the world. Documentation of each days minutes are located in the minutes folder of our github repo. These minutes include what everyone did, what they plan to do, and what the impediments were, if any.[Minutes](https://github.com/mrtyson93/insurancemasters/tree/main/minutes) Here is a link directly to one days documentation of a scrum meeting: [Nov 11](https://github.com/mrtyson93/insurancemasters/blob/main/minutes/11%20Nov%20-%20daily%20scrum.docx)
+- **Daily Scrums**: Scrums were completed in our slack channel when not able to meet on weekends due to time constraints of people being located around the world. Documentation of each days minutes are located in the minutes folder of our github repo. These minutes include what everyone did, what they plan to do, and what the impediments were, if any.[Minutes](https://github.com/mrtyson93/insurancemasters/tree/main/ProjectManagement/minutes) Here is a link directly to one days documentation of a scrum meeting: [Nov 11](https://github.com/mrtyson93/insurancemasters/blob/main/ProjectManagement/minutes/11%20Nov%20-%20daily%20scrum.docx)
 
 - **Impediment Removal Plan**: Swarm the impediment as a team to come up with a solution or workaround to unblock the impediment.
 
-- **Sprint board update and Burndown Updates**: Screenshots of burndown updates are above. Screenshots of board below. ![Alt text](/Sprint1/backlog1.png?raw=true) ![Alt text](/Sprint1/backlog2.png?raw=true) ![Alt text](/Sprint1/backlog3.png?raw=true)
+- **Sprint board update and Burndown Updates**: Screenshots of burndown updates are above. Screenshots of board below. ![Alt text](/ProjectManagement/Sprint1/backlog1.png?raw=true) ![Alt text](/ProjectManagement/Sprint1/backlog2.png?raw=true) ![Alt text](/ProjectManagement/print1/backlog3.png?raw=true)
 
-- **Pair programming evidence**: ![Alt text](/Sprint1/pairprogram1.png?raw=true) ![Alt text](/Sprint1/pairprogram2.png?raw=true)
+- **Pair programming evidence**: ![Alt text](/ProjectManagement/Sprint1/pairprogram1.png?raw=true) ![Alt text](/ProjectManagement/Sprint1/pairprogram2.png?raw=true)
 
-- **Tests**: The tests are built using selenium and are in the testing folder at [Testing](https://github.com/mrtyson93/insurancemasters/tree/main/testing). A screeenshot of the 10 successful unit tests are below. ![Alt text](/Sprint1/tests.png?raw=true)
+- **Tests**: The tests are built using selenium and are in the testing folder at [Testing](https://github.com/mrtyson93/insurancemasters/tree/main/ProjectManagement/testing). A screeenshot of the 10 successful unit tests are below. ![Alt text](/ProjectManagement/Sprint1/tests.png?raw=true)
 
 - **Sprint Review**: Part 1 held on 11/14 without stakeholder. Decision made: Database creation task is required for the retrieval of the information using the email. It is not required for form page. Moving to next sprint PBI for revisiting quotation. Part 2 held on 11/15 with the stakeholder.
 
 - **Working Software**: Link to Insurance Masters: [Insurance Masters](https://insurancemaster.herokuapp.com/) Screenshot Proof:
-  ![Alt text](/Sprint1/websiteproof.png?raw=true)
+  ![Alt text](/ProjectManagement/Sprint1/websiteproof.png?raw=true)
 
-- **Stakeholder attending Sprint Review Proof**: ![Alt text](/Sprint1/stakeholderproof.png?raw=true)
+- **Stakeholder attending Sprint Review Proof**: ![Alt text](/ProjectManagement/Sprint1/stakeholderproof.png?raw=true)
 - **Sprint Retro Actions:**
   - Populate latin text with real text
   - Update User Stories to be more user story accurate
