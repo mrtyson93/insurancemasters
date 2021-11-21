@@ -1,0 +1,9 @@
+{
+  "environments": {
+    "test": {
+      "scripts": {
+        "test": "python -m unittest python_logic\test_quote.py"
+      }
+    }
+  }
+}

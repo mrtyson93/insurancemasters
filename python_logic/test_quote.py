@@ -1,6 +1,6 @@
 import unittest
 
-from quote import Question, InsuranceQuote, DO_NOT_INSURE
+from .quote import Question, InsuranceQuote, DO_NOT_INSURE
 
 
 class TestQuote(unittest.TestCase):
