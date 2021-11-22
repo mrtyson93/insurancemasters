@@ -1,2 +1,2 @@
 web: gunicorn --pythonpath app/ app:app
-release: bash test.sh
+worker: bash test.sh
