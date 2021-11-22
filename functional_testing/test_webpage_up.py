@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
 from config import URL
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
@@ -7,7 +8,10 @@ from selenium.webdriver.support.ui import Select
 
 def test_webpage_up():
     service=Service('chromedriver.exe')
-    driver = webdriver.Chrome(service=service)
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--window-size=1920x1080")
+    driver = webdriver.Chrome(options=chrome_options, service=service)
     
     driver.get(URL)
     driver.maximize_window()
@@ -17,7 +21,10 @@ def test_webpage_up():
  
 def test_nav_to_your_business():
     service=Service('chromedriver.exe')
-    driver = webdriver.Chrome(service=service)
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--window-size=1920x1080")
+    driver = webdriver.Chrome(options=chrome_options, service=service)
     
     driver.get(URL)
     driver.maximize_window()

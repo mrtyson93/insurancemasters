@@ -1,3 +1,4 @@
 #!/bin/bash
 echo "Hello World"
-curl google.com
+cd functional_testing
+pytest
