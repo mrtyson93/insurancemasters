@@ -1,1 +1,1 @@
-web: echo "helloworld"
+web: gunicorn --pythonpath app/ app:app
