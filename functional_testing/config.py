@@ -1,1 +1,1 @@
-URL = "http://127.0.0.1:5010/"
+URL = "https://insurancemaster.herokuapp.com/"
