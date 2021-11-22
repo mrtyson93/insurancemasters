@@ -71,11 +71,19 @@
       <div class="row">
         <div class="col-md-4">
           <span class="col-md-4" style="color: red">*</span>
-          <input type="text" placeholder="Phone" required maxlength="15" />
+          <input type="text" 
+          placeholder="Phone eg. (+1 623 810 5235)" 
+          required maxlength="15"
+          pattern="^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$" 
+           />
         </div>
         <div class="col-md-4">
           <span class="col-md-4" style="color: red">*</span>
-          <input type="text" placeholder="Email" required maxlength="50" />
+          <input type="text" 
+          placeholder="Email" 
+          required maxlength="50"
+          pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" 
+           />
         </div>
       </div>
       <!-- <div class="row">
@@ -97,6 +105,7 @@
             placeholder="Business Address"
             name="txt-field-address"
             required
+            pattern="^[#.0-9a-zA-Z\s,-]+$"
             maxlength="80"
           />
         </div>
@@ -119,7 +128,7 @@
         <div class="col-md-2">
           <input
             type="text"
-            placeholder="12345-6789"
+            placeholder="Zip eg. (12345-6789)"
             required
             pattern="^[0-9]{5}(?:-[0-9]{4})?$"
           />
