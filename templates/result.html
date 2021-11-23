@@ -13,33 +13,38 @@
     <div class="row">
       <h4 class="entry-title"><b>Quote Details</b></h4>
     </div>
-     <div class="row">
+    <div class="row">
+      <form>
         <div class="col-md-4">
           Deductible Options:<span style="color: red">*</span>
-          <select  name="deductible_options" onchange="changeOptions()">
+          <select name="deductible_options" onchange="changeOptions()">
             {% for deductible in DEDUCTIBLE_OPTIONS %}
             <option value="{{deductible.value}}">{{deductible.text}}</option>
             {% endfor %}
           </select>
         </div>
-       <div class="col-md-4">
+        <div class="col-md-4">
           Coverage Per Incident Options:<span style="color: red">*</span>
-          <select name="coverage_per_incident_options" onchange="changeOptions()">
+          <select
+            name="coverage_per_incident_options"
+            onchange="changeOptions()"
+          >
             {% for coverage in COVERAGE_PER_INCIDENT_OPTIONS %}
             <option value="{{coverage.value}}">{{coverage.text}}</option>
             {% endfor %}
           </select>
         </div>
-      </div>
+      </form>
+    </div>
     <div class="row">
-      <input type="hidden" name="quote_value" value="{{ quote }}">
-      <h2><b>Your Quote Monthly Premium: </b> <span id="final_quote">{{ display_quote }}</span> </h2>
+      <input type="hidden" name="quote_value" value="{{ quote }}" />
+      <h2>
+        <b>Your Quote Monthly Premium: </b>
+        <span id="final_quote">{{ display_quote }}</span>
+      </h2>
     </div>
   </div>
 </div>
-{% endblock %}
-
-{% block footer %}
+{% endblock %} {% block footer %}
 <script src="{{ url_for('static', filename='js/result.js') }}" defer></script>
 {% endblock %}
-

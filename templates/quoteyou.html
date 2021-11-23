@@ -22,7 +22,7 @@
       </div>
       <div class="row">
         <div class="col-md-4">
-          <span class="col-md-4" style="color: red">*</span>
+          <span style="color: red">*</span> First Name
           <input
             type="text"
             placeholder="First Name"
@@ -32,7 +32,7 @@
           />
         </div>
         <div class="col-md-4">
-          <span class="col-md-4" style="color: red">*</span>
+          <span style="color: red">*</span> Last Name
           <input
             type="text"
             placeholder="Last Name"
@@ -45,7 +45,7 @@
       </div>
       <div class="row">
         <div class="col-md-8">
-          <span class="col-md-4" style="color: red">*</span>
+          <span style="color: red">*</span> Registered Business Name
           <input
             type="text"
             placeholder="Registered Business Name"
@@ -56,6 +56,7 @@
       </div>
       <div class="row">
         <div class="col-md-8">
+          Firm d/b/a
           <input type="text" placeholder="Firm d/b/a" maxlength="80" />
         </div>
       </div>
@@ -70,20 +71,30 @@
       </div>
       <div class="row">
         <div class="col-md-4">
-          <span class="col-md-4" style="color: red">*</span>
-          <input type="text" 
-          placeholder="Phone eg. (+1 623 810 5235)" 
-          required maxlength="15"
-          pattern="^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$" 
-           />
+          Phone Number
+          <span style="color: red">*</span>
+          <input
+            type="text"
+            placeholder="Phone eg. (+1 623 810 5235)"
+            required
+            maxlength="15"
+            oninvalid="this.setCustomValidity('Must be valid phone number')"
+            oninput="this.setCustomValidity('')"
+            pattern="^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$"
+          />
         </div>
         <div class="col-md-4">
-          <span class="col-md-4" style="color: red">*</span>
-          <input type="text" 
-          placeholder="Email" 
-          required maxlength="50"
-          pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" 
-           />
+          Email
+          <span style="color: red">*</span>
+          <input
+            type="text"
+            placeholder="Email"
+            required
+            maxlength="50"
+            oninvalid="this.setCustomValidity('Must be valid email address')"
+            oninput="this.setCustomValidity('')"
+            pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+          />
         </div>
       </div>
       <!-- <div class="row">
@@ -99,8 +110,8 @@
       </div> -->
       <div class="row">
         <div class="col-md-8">
-          <span class="col-md-4" style="color: red">*</span
-          ><input
+          <span style="color: red">*</span>Business Address
+          <input
             type="text"
             placeholder="Business Address"
             name="txt-field-address"
@@ -112,10 +123,12 @@
       </div>
       <div class="row">
         <div class="col-md-3">
+          <span style="color: red">*</span>City
           <input type="text" placeholder="City" required maxlength="32" />
         </div>
         <div class="col-md-3">
-          State
+          <span style="color: red">*</span>State
+          <br />
           <select>
             <option value="">Please select one</option>
             <option value="CA">California</option>
@@ -126,10 +139,13 @@
           </select>
         </div>
         <div class="col-md-2">
+          <span style="color: red">*</span>Zip Code
           <input
             type="text"
-            placeholder="Zip eg. (12345-6789)"
+            placeholder="eg. (12345-6789)"
             required
+            oninvalid="this.setCustomValidity('Must be a valid zip code')"
+            oninput="this.setCustomValidity('')"
             pattern="^[0-9]{5}(?:-[0-9]{4})?$"
           />
         </div>
