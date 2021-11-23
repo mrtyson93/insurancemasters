@@ -130,12 +130,11 @@
           <span style="color: red">*</span>State
           <br />
           <select>
-            <option value="">Please select one</option>
-            <option value="CA">California</option>
-            <option value="TX">Texas</option>
-            <option value="WA">Washington</option>
-            <option value="FL">Florida</option>
-            <option value="VA">Virginia</option>
+            <option value="CA" {% if selected_state=='CA' %} selected="selected"{% endif %}>California</option>
+            <option value="TX" {% if selected_state=='TX' %} selected="selected"{% endif %}>Texas</option>
+            <option value="WA" {% if selected_state=='WA' %} selected="selected"{% endif %}>Washington</option>
+            <option value="FL" {% if selected_state=='FL' %} selected="selected"{% endif %}>Florida</option>
+            <option value="VA" {% if selected_state=='VA' %} selected="selected"{% endif %}>Virginia</option>
           </select>
         </div>
         <div class="col-md-2">
