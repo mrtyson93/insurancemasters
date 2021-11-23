@@ -6,5 +6,5 @@ if curl -s "https://insurancemaster.herokuap.com/" | grep -q "$string_to_find"; 
     exit 0
 else
     echo "Insurance Master is not up and running. Investigate Now!"
-    exit 1
+    exit -1
 fi
