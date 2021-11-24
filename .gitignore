@@ -10,3 +10,4 @@ python_logic/__pycache__/*
 functional_testing/__pycache__/*
 functional_testing/.pytest_cache/*
 
+.idea/workspace.xml

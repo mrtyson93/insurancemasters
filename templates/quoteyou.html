@@ -25,7 +25,7 @@
           <span style="color: red">*</span> First Name
           <input
             type="text"
-            placeholder="First Name"
+            placeholder="Enter your legal first name"
             name="txt-field-first-name"
             required
             maxlength="32"
@@ -35,7 +35,7 @@
           <span style="color: red">*</span> Last Name
           <input
             type="text"
-            placeholder="Last Name"
+            placeholder="Enter your legal last name"
             name="txt-field-last-name"
             required
             maxlength="32"
@@ -48,7 +48,7 @@
           <span style="color: red">*</span> Registered Business Name
           <input
             type="text"
-            placeholder="Registered Business Name"
+            placeholder="Enter your business name exactly as registered with the state"
             required
             maxlength="80"
           />
@@ -57,14 +57,15 @@
       <div class="row">
         <div class="col-md-8">
           Firm d/b/a
-          <input type="text" placeholder="Firm d/b/a" maxlength="80" />
+          <input type="text" placeholder="Enter legal name under business or operation is Doing Business As" maxlength="80" />
         </div>
       </div>
       <div class="row">
         <div class="col-md-8">
+          Formerly known as
           <input
             type="text"
-            placeholder="Your business formerly known as"
+            placeholder="Enter the former name of your business"
             maxlength="80"
           />
         </div>
@@ -75,7 +76,7 @@
           <span style="color: red">*</span>
           <input
             type="text"
-            placeholder="Phone eg. (+1 623 810 5235)"
+            placeholder="Enter a valid business phone eg. (+1 623 810 5235)"
             required
             maxlength="15"
             oninvalid="this.setCustomValidity('Must be valid phone number')"
@@ -88,7 +89,7 @@
           <span style="color: red">*</span>
           <input
             type="text"
-            placeholder="Email"
+            placeholder="Enter a valid business email"
             required
             maxlength="50"
             oninvalid="this.setCustomValidity('Must be valid email address')"
@@ -113,7 +114,7 @@
           <span style="color: red">*</span>Business Address
           <input
             type="text"
-            placeholder="Business Address"
+            placeholder="Enter business address in which your business is headquartered"
             name="txt-field-address"
             required
             pattern="^[#.0-9a-zA-Z\s,-]+$"
@@ -122,13 +123,12 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-4">
           <span style="color: red">*</span>City
-          <input type="text" placeholder="City" required maxlength="32" />
+          <input type="text" placeholder="Enter the city" required maxlength="32" />
         </div>
-        <div class="col-md-3">
-          <span style="color: red">*</span>State
-          <br />
+        <div class="col-md-2">
+          <span style="color: red">*</span>State<br>
           <select>
             <option value="CA" {% if selected_state=='CA' %} selected="selected"{% endif %}>California</option>
             <option value="TX" {% if selected_state=='TX' %} selected="selected"{% endif %}>Texas</option>
