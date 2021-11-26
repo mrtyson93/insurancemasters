@@ -35,7 +35,7 @@
       href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css"
       rel="stylesheet"
     />
-
+ {% block header %} {% endblock %}
     <!--[if lt IE 9]>
       <script src="{{ url_for('static', filename='./js/ie-support/html5.js') }}"></script>
       <script src="{{ url_for('static', filename='./js/ie-support/respond.js') }}"></script>
