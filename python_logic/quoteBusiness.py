@@ -20,7 +20,7 @@ EMPLOYEE_COUNTS = [
   {"value": "1", "text": "1"},
   {"value": "5", "text": "2-5"},
   {"value": "25", "text": "6-25"},
-  {"value": "50", "text": "25+"},
+  # {"value": "50", "text": "25+"},
 ]
 
 REVENUES = [
@@ -28,7 +28,7 @@ REVENUES = [
   {"value": "10", "text": "Between $250k/yr and $1M/yr"},
   {"value": "100", "text": "$1M-$5M"},
   {"value": "1000", "text": "$5M-$25M"},
-  {"value": "10000", "text": "$25M+"},
+  # {"value": "10000", "text": "$25M+"},
 ]
 
 BUSINESS_NATURES = [  

@@ -1,0 +1,141 @@
+{% extends "layout.html" %} {% block content %}
+<div class="breadcrumbs">
+    <div class="container">
+        <a href="./index">Home</a>
+        <span>FAQ</span>
+    </div>
+</div>
+
+<div class="page">
+    <div class="fullwidth-block">
+        <div class="container">
+            <h1 class="entry-title">FAQ</h1>
+            <div id="accordion">
+                <h3>Q: Why InsuranceMasters?</h3>
+                <div>
+                    <p>
+                        <b>A:</b> InsuranceMaster specializes in providing General Liability insurance out-of-the-box. All
+                        customizations happen through a series of brief interactive online Q&A. This deep specialization
+                        allows our firm to laser focus on one type of insurance in the target small business market, and
+                        in turn simple and no-hassle, and efficient binding journey and claim processing, including
+                        auto-adjusting renewals for you, meeting your needs, so you can focus on your business, leaving
+                        managing your risk to InsuranceMasters.
+                    </p>
+                </div>
+                <h3>Q: Why do I need general liability insurance?</h3>
+                <div>
+                    <p>
+                        <b>A:</b> General Liability coverage can help you out if you or your employees is accused of slander,
+                        disparagement, or copyright infringement. It covers claims of bodily injury and property damage
+                        that result from the use of your product. These expenses can be very hefty, but general
+                        liability can help your business stay on its feet. General liability provides coverage to help
+                        you defend or settle claims, even if the claim brought against your business has no real basis.
+                        General liability coverage can cover liability expenses associated with your legal defense you
+                        need. General liability can help cover the injured person’s medical expenses.
+                    </p>
+                </div>
+                <h3>Q: Can I get coverage everywhere in the world?</h3>
+                <div>
+                    <p>
+                        <b>A:</b> InsuranceMasters provide you coverage in US states of Texas, Washington, Virginia,
+                        California, and Florida.
+                    </p>
+                </div>
+                <h3>Q: What do I do with my online quote?</h3>
+                <div>
+                    <p>
+                        <b>A:</b> You will call our Underwriters at 623-810-5235, and they will bind your quote, effectively
+                        you will be insured.
+                    </p>
+                </div>
+                <h3>Q: What types of businesses do you insured?</h3>
+                <div>
+                    <p>
+                        <b>A:</b> InsuranceMasters insure Sole Proprietorship, Limited Liability, and Corporations. We offer
+                        insurance to a variety of business nature. You may call us for more details. Specifically </p>
+                    <ul class="col-sm-12">
+                        <li>Manufacture, distribute, construct, install, or repair tangible goods – you may select this
+                            if your business is in tangible and physical goods. You will be insured whether you
+                            manufacture, build, design, distribute, configure, customize, install, or remedy/repair
+                            goods such as vehicle, computers, machinery, etc.
+                        </li>
+                        <li>Sales or business development – you may select this if you primarily sell your own goods to
+                            others’ goods. This includes business development activities.
+                        </li>
+                        <li>Consult in agriculture, medical, aerospace, environmental, oil/gas – you may select this if
+                            your business is in raw products are earth extracts such as oil, gar, minerals; or, your
+                            business is in medical/dental/vision devices; or, your business is in agriculture and
+                            aerospace activities.
+                        </li>
+                        <li>Consult in technology, management, legal, education, and associated training. You may select
+                            this is if you provide consulting and educational services, including legal advice.
+                        </li>
+                        <li>Other- you may select this if your business does not fall into any of the four cateogries.
+                        </li>
+                    </ul>
+
+                </div>
+                <h3>Q: Are there limitations on revenues and employee counts in my company?</h3>
+                <div>
+                    <p>
+                        <b>A:</b> InsuranceMasters can insure businesses with 25 or less staff counts.
+                    </p>
+                </div>
+                <h3>Q: How long is the quote good for?</h3>
+                <div>
+                    <p>
+                        <b>A:</b> Once you receive your quote, it is valid for up to 90 days from the date the quote was
+                        generated.
+                    </p>
+                </div>
+                <h3>Q: When and how is my insurance effective?</h3>
+                <div>
+                    <p>
+                        <b>A:</b> Once your first payment is made, you are insured.
+                    </p>
+                </div>
+                <h3>Q: What are my coverage limits?</h3>
+                <div>
+                    <p>
+                        <b>A:</b> your policy covers you up to $2M for the entire term of the policy which is one year. That is
+                        called the Aggregate limit and it is reset at renewal. Every instance of claim covers you up to
+                        your selected option of instances which can be $1M, $500K, or $250K per claim after met
+                        deductibles.
+                    </p>
+                </div>
+                <h3>Q: How does deductible work?</h3>
+                <div>
+                    <p>
+                        <b>A:</b> You have options to select $0, $2,500, $5,000, or $10,000. Your coverage of claim payments is
+                        made once the selected deductible paid by you is met at each occurrence. The deductible is not
+                        cumulative and is reset after each submitted claim and occurrence of loss.
+                    </p>
+                </div>
+                <h3>Q: What if I make an error in my answers and receive a quote?</h3>
+                <div>
+                    <p>
+                        <b>A:</b> Quote is valid based on actual and valid answers. You may call and provide correction to your
+                        answers during the life of the policy and changes will be made retroactively. Changes to your
+                        required payment will be made in the following cycle. However, if you submit a claim based on
+                        erroneous answers, your claim may be rejected, and depending on the nature of the error, your
+                        policy may be cancelled without any refunds.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <!-- .container -->
+    </div>
+    <!-- .fullwidth-block -->
+</div>
+
+{% endblock %}
+
+{% block footer %}
+<script src="{{ url_for('static', filename='js/jquery-ui-1.11.1-min.js') }}"></script>
+<script>
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+  </script>
+{% endblock %}

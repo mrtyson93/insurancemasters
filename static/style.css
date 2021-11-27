@@ -2399,3 +2399,13 @@ form input[type="reset"]:focus {
   background-color: #4a4c4e;
   border-radius: 4px;
 }
+
+.ui-accordion-header{
+  font-family: "Roboto Condensed", "Open Sans", sans-serif;
+  font-size: 1.65em;
+}
+
+.ui-accordion-content{
+  font-family: "Roboto Condensed", "Open Sans", sans-serif;
+  font-size: 0.85em;
+}

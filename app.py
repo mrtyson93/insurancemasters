@@ -1,7 +1,7 @@
 from dotenv import load_dotenv
 from flask import Flask, render_template
 import os
-from python_logic import quoteYou, quoteBusiness, result, contact, quote
+from python_logic import quoteYou, quoteBusiness, result, contact, quote, faq
 # from quoteYou import quoteyou
 # from quoteBusiness import quotebusiness
 # from about import about
@@ -22,6 +22,7 @@ app.register_blueprint(quoteBusiness.quotebusiness)
 # app.register_blueprint(about)
 app.register_blueprint(result.result)
 app.register_blueprint(contact.contact)
+app.register_blueprint(faq.faq)
 
 
 @app.route('/')
