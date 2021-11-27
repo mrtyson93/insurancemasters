@@ -179,7 +179,7 @@ Used points 10, 20, 30, 40, and 50 as the different size options.
 
 - **Tests**: The unit tests are in the python_logic\test_quote.py file. [File here](https://github.com/mrtyson93/insurancemasters/blob/main/python_logic/test_quote.py). A screeenshot of 28 successful unit tests are below. Our final submissions has 26 unit tests ![Alt text](/ProjectManagement/Sprint2/tests.png?raw=true)
 
-- **Sprint Review**: Part 1 held on 11/28 without stakeholder. Part 2 held on 11/19 with the stakeholder.
+- **Sprint Review**: Part 1 held on 11/28 without stakeholder. Part 2 held on 11/29 with the stakeholder.
 
 - **Working Software**: Link to Insurance Masters: [Insurance Masters](https://insurancemaster.herokuapp.com/) Screenshot Proof:
   ![Alt text](/ProjectManagement/Sprint2/websiteproof.png?raw=true)
