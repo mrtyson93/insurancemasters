@@ -116,13 +116,13 @@ Used points 10, 20, 30, 40, and 50 as the different size options.
 
 - **Kanban board link**: [Miro Board](https://miro.com/app/board/o9J_lnCeYTY=/?invite_link_id=692868496345)
 
-- **Burndown chart**: Also on the same Miro Board: [Miro Board](https://miro.com/app/board/o9J_lnCeYTY=/?invite_link_id=692868496345) Miro doesnt keep the formatting of the burndown chart line so here are progressive screenshots of it ![Alt text](/ProjectManagement/Sprint1/kanban1.png?raw=true) ![Alt text](/Sprint1/kanban2.png?raw=true) ![Alt text](/ProjectManagement/Sprint1/kanban3.png?raw=true)
+- **Burndown chart**: Also on the same Miro Board: [Miro Board](https://miro.com/app/board/o9J_lnCeYTY=/?invite_link_id=692868496345) Miro doesnt keep the formatting of the burndown chart line so here are progressive screenshots of it ![Alt text](/ProjectManagement/Sprint1/kanban1.png?raw=true) ![Alt text](/ProjectManagement/Sprint1/kanban2.png?raw=true) ![Alt text](/ProjectManagement/Sprint1/kanban3.png?raw=true)
 
 - **Daily Scrums**: Scrums were completed in our slack channel when not able to meet on weekends due to time constraints of people being located around the world. Documentation of each days minutes are located in the minutes folder of our github repo. These minutes include what everyone did, what they plan to do, and what the impediments were, if any.[Minutes](https://github.com/mrtyson93/insurancemasters/tree/main/ProjectManagement/minutes) Here is a link directly to one days documentation of a scrum meeting: [Nov 11](https://github.com/mrtyson93/insurancemasters/blob/main/ProjectManagement/minutes/11%20Nov%20-%20daily%20scrum.docx)
 
 - **Impediment Removal Plan**: Swarm the impediment as a team to come up with a solution or workaround to unblock the impediment.
 
-- **Sprint board update and Burndown Updates**: Screenshots of burndown updates are above. Screenshots of board below. ![Alt text](/ProjectManagement/Sprint1/backlog1.png?raw=true) ![Alt text](/ProjectManagement/Sprint1/backlog2.png?raw=true) ![Alt text](/ProjectManagement/print1/backlog3.png?raw=true)
+- **Sprint board update and Burndown Updates**: Screenshots of burndown updates are above. Screenshots of board below. ![Alt text](/ProjectManagement/Sprint1/backlog1.png?raw=true) ![Alt text](/ProjectManagement/Sprint1/backlog2.png?raw=true) ![Alt text](/ProjectManagement/Sprint1/backlog3.png?raw=true)
 
 - **Pair programming evidence**: ![Alt text](/ProjectManagement/Sprint1/pairprogram1.png?raw=true) ![Alt text](/ProjectManagement/Sprint1/pairprogram2.png?raw=true)
 
@@ -148,3 +148,50 @@ Used points 10, 20, 30, 40, and 50 as the different size options.
 - Acceptance criteria met for each story
 - New unit tests passed
 - No bugs introduced, all prior tests still pass
+
+---
+
+# Part 3
+
+- **Note**: All User Stories are expressed as user stories if you click into the details of a PBI. The titles of the PBIs are shorter on the backlog for brevities sake.
+
+- **Forecasted Points**: 100 Points Per Sprint
+- **Rationale**: Last Sprint we completed 100 points with not much room to spare so we used that as our expected velocity again. Although, we did end up pulling 20 extra points from the backlog this sprint for a total completed points of 120. It appears our velocity has gone up as the process has smoothed out.
+- **Stories pulled into backlog**: Our backlog is ordered in terms of what needs to get done first, we, the developers, pulled the maximum stories into our sprint from the top of the backlog that did not exceed our forecasted points.
+
+- All stories are less than half of our current forecast. (Max of 40)
+- User stories were decomposed into tasks, in our Miro board, red items are tasks, and blue items are user stories as outlined by the key.
+
+- **Kanban board link**: [Miro Board](https://miro.com/app/board/o9J_lnCeYTY=/?invite_link_id=692868496345) The board is split into Sprint 1 and Sprint 2 which are clearly labeled.
+
+- **Burndown chart**: Also on the same Miro Board and split out by sprint: [Miro Board](https://miro.com/app/board/o9J_lnCeYTY=/?invite_link_id=692868496345) Miro doesnt keep the formatting of the burndown chart line so progressive screenshots of it below. We also started the sprint with expected points of 100, but we went over that to 120, which is why the points go into the negative. ![Alt text](/ProjectManagement/Sprint2/burndown2.png?raw=true) ![Alt text](/ProjectManagement/Sprint2/burndown3.png?raw=true) ![Alt text](/ProjectManagement/Sprint2/burndown4.png?raw=true)
+
+- **Daily Scrums**: Scrums were completed in our slack channel when not able to meet on weekends due to time constraints of people being located around the world. Documentation of each days minutes are located in the minutes folder of our github repo. These minutes include what everyone did, what they plan to do, and what the impediments were, if any. [Minutes](https://github.com/mrtyson93/insurancemasters/tree/main/ProjectManagement/minutes) Here is a link directly to one days documentation of a scrum meeting: [Nov 21](https://github.com/mrtyson93/insurancemasters/blob/main/ProjectManagement/minutes/21%20Nov%20-%20daily%20scrum%20-%20sprint%202.docx)
+
+- **Impediment Removal Plan**: Swarm the impediment as a team to come up with a solution or workaround to unblock the impediment. For example, as documented in our [Nov 19th](https://github.com/mrtyson93/insurancemasters/blob/main/ProjectManagement/minutes/19%20Nov%20-%20daily%20scrum%20-%20sprint%202.docx) minutes, there was an impediment to complete mob programming because the team is distributed around the world. The solution was to add it to our consistent weekend meeting agenda, because that is the known time that we have available.
+
+- **Sprint board update and Burndown Updates**: Screenshots of burndown updates are above. Screenshots of board below, individuals who completed the tasks are assigned to the tasks on the kanban board ![Alt text](/ProjectManagement/Sprint2/backlog1.png?raw=true) ![Alt text](/ProjectManagement/Sprint2/backlog2.png?raw=true) ![Alt text](/ProjectManagement/Sprint2/backlog3.png?raw=true)
+
+- **Pair programming evidence**:
+
+  - 11/21 Mob Programming
+    ![Alt text](/ProjectManagement/Sprint2/mobprogramming1.png?raw=true) ![Alt text](/ProjectManagement/Sprint2/mobprogramming2.png?raw=true)
+
+- **Tests**: The unit tests are in the python_logic\test_quote.py file. [File here](https://github.com/mrtyson93/insurancemasters/blob/main/python_logic/test_quote.py). A screeenshot of 28 successful unit tests are below. Our final submissions has 26 unit tests ![Alt text](/ProjectManagement/Sprint2/tests.png?raw=true)
+
+- **Sprint Review**: Part 1 held on 11/28 without stakeholder. Part 2 held on 11/19 with the stakeholder.
+
+- **Working Software**: Link to Insurance Masters: [Insurance Masters](https://insurancemaster.herokuapp.com/) Screenshot Proof:
+  ![Alt text](/ProjectManagement/Sprint2/websiteproof.png?raw=true)
+
+- **Stakeholder attending Sprint Review Proof**: ![Alt text](TBD)
+- **Continuous Integration**:
+  We used herokus pipeline feature to implement our CI pipeline. The first thing it does is after code is pushed to main is run the unit tests as outlined in the [app.json](https://github.com/mrtyson93/insurancemasters/blob/main/app.json) file. If those tests fail, the pipeline does not proceed, if they all pass, the pipeline proceeds. Screenshots of the tests in the pipeline are below. ![Alt text](/ProjectManagement/Sprint2/ci1.png?raw=true). You can also see from the screenshot below that we have hooked up our github repository to the pipeline so that whenever main is pushed to, the pipeline is run. We as a team, only develop from the main branch.
+  ![Alt text](/ProjectManagement/Sprint2/ci2.png?raw=true)
+
+- **Continuous Delivery**:
+  We also use herokus pipeline feature to implement the CD portion of our pipeline. After the tests are successfully run, the pipeline deploys to our qa environment, then our production environment, then runs a simple to test that the website is reachable and is returning expected content. If any of these steps fail, the pipeline stops and does not proceed to further steps.
+  Here is a screenshot of our pipeline steps ![Alt text](/ProjectManagement/Sprint2/cd1.png?raw=true) Here is a screenshot of the logs of the project being built and deployed. ![Alt text](/ProjectManagement/Sprint2/cd2.png?raw=true). And finally, here is a screenshot from the logs of testing the website is up and running after the app has been deployed. ![Alt text](/ProjectManagement/Sprint2/cd3.png?raw=true)
+
+- **Sprint Retro Actions:**
+  - TBD

@@ -64,12 +64,6 @@ class TestQuote(unittest.TestCase):
         quote.render_quote()
         self.assertEqual(1.2, questions[0].factor)
 
-    def test_employee_counts_25_plus(self):
-        questions = [Question("EMPLOYEE_COUNTS", "50", 1)]
-        quote = InsuranceQuote(questions)
-        quote.render_quote()
-        self.assertEqual(DO_NOT_INSURE, questions[0].factor)
-
     def test_revenues_less_than_250k(self):
         questions = [Question("REVENUES", "1", 1)]
         quote = InsuranceQuote(questions)
@@ -93,12 +87,6 @@ class TestQuote(unittest.TestCase):
         quote = InsuranceQuote(questions)
         quote.render_quote()
         self.assertEqual(1.15, questions[0].factor)
-
-    def test_revenues_25M_plus(self):
-        questions = [Question("REVENUES", "10000", 1)]
-        quote = InsuranceQuote(questions)
-        quote.render_quote()
-        self.assertEqual(DO_NOT_INSURE, questions[0].factor)
 
     def test_business_nature_manufacture(self):
         questions = [Question("BUSINESS_NATURES", "1", 1)]
