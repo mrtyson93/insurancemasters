@@ -187,12 +187,27 @@ Used points 10, 20, 30, 40, and 50 as the different size options.
 
 - **Stakeholder attending Sprint Review Proof**: ![Alt text](TBD)
 - **Continuous Integration**:
-  We used herokus pipeline feature to implement our CI pipeline. The first thing it does is after code is pushed to main is run the unit tests as outlined in the [app.json](https://github.com/mrtyson93/insurancemasters/blob/main/app.json) file. If those tests fail, the pipeline does not proceed, if they all pass, the pipeline proceeds. Screenshots of the tests in the pipeline are below. ![Alt text](/ProjectManagement/Sprint2/ci1.png?raw=true). You can also see from the screenshot below that we have hooked up our github repository to the pipeline so that whenever main is pushed to, the pipeline is run. We as a team, only develop from the main branch.
-  ![Alt text](/ProjectManagement/Sprint2/ci2.png?raw=true)
+  We are using herokus pipeline feature to implement our CI pipeline. ![Alt text](/ProjectManagement/Sprint2/cd1.png?raw=true). We only have one branch that we use which is the main branch. ![Alt text](/ProjectManagement/Sprint2/onlyonebranch.png?raw=true). You can also see from our [Commit History](https://github.com/mrtyson93/insurancemasters/commits/main) that we only push to the main branch. The screenshot below shows that we have connected our github repository to the pipeline so that whenever main is pushed to, the pipeline is run. ![Alt text](/ProjectManagement/Sprint2/ci2.png?raw=true) The first thing it does after code is pushed to main is run the unit tests as outlined in the [app.json](https://github.com/mrtyson93/insurancemasters/blob/main/app.json) file. If those tests fail, the pipeline does not proceed, if they all pass, the pipeline proceeds. Screenshots of the tests in the pipeline are below.
+
+  Successful Test![Alt text](/ProjectManagement/Sprint2/ci1.png?raw=true)
+
+  Failed Test![Alt text](/ProjectManagement/Sprint2/ciFail1.png?raw=true)
+
+  After the tests pass, the pipeline continues to build and then deploy the application to the correct environments. Below is a screenshot of the qa environment being built(and then deployed) after successful tests ran.![Alt text](/ProjectManagement/Sprint2/cibuild.png?raw=true)
 
 - **Continuous Delivery**:
-  We also use herokus pipeline feature to implement the CD portion of our pipeline. After the tests are successfully run, the pipeline deploys to our qa environment, then our production environment, then runs a simple to test that the website is reachable and is returning expected content. If any of these steps fail, the pipeline stops and does not proceed to further steps.
-  Here is a screenshot of our pipeline steps ![Alt text](/ProjectManagement/Sprint2/cd1.png?raw=true) Here is a screenshot of the logs of the project being built and deployed. ![Alt text](/ProjectManagement/Sprint2/cd2.png?raw=true). And finally, here is a screenshot from the logs of testing the website is up and running after the app has been deployed. ![Alt text](/ProjectManagement/Sprint2/cd3.png?raw=true)
+  We also use Heroku's pipeline feature to implement the CD portion of our pipeline. A visual of the Pipeline steps is below. The first stage builds ands deploys to our QA environment, on successful deployment of the QA environment, our production environment is built and deployed to. Finally, after production is successfully deployed to, our production tests to test it is up and running are ran.![Alt text](/ProjectManagement/Sprint2/cd1.png?raw=true) If any of these steps fail, the pipeline stops and does not proceed to further steps.
+  Here is a screenshot of the logs of the project being built and deployed. ![Alt text](/ProjectManagement/Sprint2/cd2.png?raw=true). And finally, here is a screenshot from the logs of testing the website is up and running after the app has been deployed. ![Alt text](/ProjectManagement/Sprint2/cd3.png?raw=true)
 
 - **Sprint Retro Actions:**
   - TBD
+
+-**Other**: Because we have integrated a CI/CD Pipeline into our development process we decided to modify our Definition of Done as follows:
+
+- All related backlog items to user story are done
+- Product owner approval
+- Acceptance criteria met for each story
+- New unit tests passed
+- No bugs introduced, all prior tests still pass
+- NEW: When code is committed, CI/CD pipeline successfully runs and deploys the new code
+- NEW: Production environment has new changes deployed
