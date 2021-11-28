@@ -1,4 +1,5 @@
 #!/bin/bash
+pytest
 echo "Testing if website is up and running"
 string_to_find="Get a Quote, Get Covered, Today"
 if curl -s "https://insurancemaster.herokuapp.com/" | grep -q "$string_to_find"; then
