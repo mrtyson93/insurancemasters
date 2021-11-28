@@ -176,6 +176,7 @@ Used points 10, 20, 30, 40, and 50 as the different size options.
 
   - 11/21 Mob Programming
     ![Alt text](/ProjectManagement/Sprint2/mobprogramming1.png?raw=true) ![Alt text](/ProjectManagement/Sprint2/mobprogramming2.png?raw=true)
+  - 11/29 Mob Programming ![Alt text](/ProjectManagement/Sprint2/mobprogramming3.png?raw=true)
 
 - **Tests**: The unit tests are in the python_logic\test_quote.py file. [File here](https://github.com/mrtyson93/insurancemasters/blob/main/python_logic/test_quote.py). A screeenshot of 28 successful unit tests are below. Our final submissions has 26 unit tests ![Alt text](/ProjectManagement/Sprint2/tests.png?raw=true)
 
