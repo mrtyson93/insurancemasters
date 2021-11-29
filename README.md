@@ -180,14 +180,17 @@ Used points 10, 20, 30, 40, and 50 as the different size options.
 
 - **Tests**: The unit tests are in the python_logic\test_quote.py file. [File here](https://github.com/mrtyson93/insurancemasters/blob/main/python_logic/test_quote.py). A screeenshot of 28 successful unit tests are below. Our final submissions has 26 unit tests ![Alt text](/ProjectManagement/Sprint2/tests.png?raw=true)
 
-- **Sprint Review**: Part 1 held on 11/28 without stakeholder. Part 2 held on 11/29 with the stakeholder.
+- **Sprint Review**: Part 1 held on 11/28 without stakeholder. Part 2 held on 11/29 with the stakeholder. From our sprint review we added three new user stories based off of feedback from our stakeholder that are outlined in the screenshot below
+
+  ![Alt text](/ProjectManagement/Sprint2/reviewchanges.png?raw=true)
 
 - **Working Software**: Link to Insurance Masters: [Insurance Masters](https://insurancemaster.herokuapp.com/) Screenshot Proof:
   ![Alt text](/ProjectManagement/Sprint2/websiteproof.png?raw=true)
 
-- **Stakeholder attending Sprint Review Proof**: ![Alt text](TBD)
+- **Stakeholder attending Sprint Review Proof**:
+  - **Richard is our stakeholder**![Alt text](/ProjectManagement/Sprint2/sprintreviewstakeholder.png?raw=true)
 - **Continuous Integration**:
-  We are using herokus pipeline feature to implement our CI pipeline. ![Alt text](/ProjectManagement/Sprint2/cd1.png?raw=true). We only have one branch that we use which is the main branch. ![Alt text](/ProjectManagement/Sprint2/onlyonebranch.png?raw=true). You can also see from our [Commit History](https://github.com/mrtyson93/insurancemasters/commits/main) that we only push to the main branch. The screenshot below shows that we have connected our github repository to the pipeline so that whenever main is pushed to, the pipeline is run. ![Alt text](/ProjectManagement/Sprint2/ci2.png?raw=true) The first thing it does after code is pushed to main is run the unit tests as outlined in the [app.json](https://github.com/mrtyson93/insurancemasters/blob/main/app.json) file. If those tests fail, the pipeline does not proceed, if they all pass, the pipeline proceeds. Screenshots of the tests in the pipeline are below.
+  We are using herokus pipeline feature to implement our CI pipeline. ![Alt text](/ProjectManagement/Sprint2/cd1.png?raw=true) We only have one branch that we use which is the main branch. ![Alt text](/ProjectManagement/Sprint2/onlyonebranch.png?raw=true) You can also see from our [Commit History](https://github.com/mrtyson93/insurancemasters/commits/main) that we only push to the main branch. The screenshot below shows that we have connected our github repository to the pipeline so that whenever main is pushed to, the pipeline is run. ![Alt text](/ProjectManagement/Sprint2/ci2.png?raw=true) The first thing it does after code is pushed to main is run the unit tests as outlined in the [app.json](https://github.com/mrtyson93/insurancemasters/blob/main/app.json) file. If those tests fail, the pipeline does not proceed, if they all pass, the pipeline proceeds. Screenshots of the tests in the pipeline are below.
 
   Successful Test![Alt text](/ProjectManagement/Sprint2/ci1.png?raw=true)
 
@@ -199,8 +202,10 @@ Used points 10, 20, 30, 40, and 50 as the different size options.
   We also use Heroku's pipeline feature to implement the CD portion of our pipeline. A visual of the Pipeline steps is below. The first stage builds ands deploys to our QA environment, on successful deployment of the QA environment, our production environment is built and deployed to. Finally, after production is successfully deployed to, our production tests are ran to test it is up and running.![Alt text](/ProjectManagement/Sprint2/cd1.png?raw=true) If any of these steps fail, the pipeline stops and does not proceed to further steps.
   Below is a screenshot of the build failing but the website still running to show that a failed build does not introduce a broken website. ![Alt text](/ProjectManagement/Sprint2/failedbuildstillrunning.png?raw=true)
   Here is a screenshot of the logs of the project being successfuly built and then deployed. ![Alt text](/ProjectManagement/Sprint2/cd2.png?raw=true) After the application is successfully deployed, the final stage runs tests against the production environment that are outlined in [buildpack-run.sh](https://github.com/mrtyson93/insurancemasters/blob/main/buildpack-run.sh). The tests test two things, one that the website is up and returns a response, and that the website returns expected results in the payloag. Below is a screenshot showing a successful post deploy test ![Alt text](/ProjectManagement/Sprint2/cd3.png?raw=true) And here is a screenshot showing the post deploy tests fail ![Alt text](/ProjectManagement/Sprint2/cdpostfail.png?raw=true)
+
 - **Sprint Retro Actions:**
-  - TBD
+  - Retro Proof: Conducted on 11/29![Alt text](/ProjectManagement/Sprint2/retro.png?raw=true)
+  - Change From Retro: We need to start meeting earlier in the sprint to get a plan laid out earlier so we can begin developing earlier. This has caused us to have to cram functionality in later in the sprint. Our plan/solution is that we have scheduled our Sprint Planning for the next sprint to be the very first day of the sprint and all team members will be present for it.
 
 -**Other**: Because we have integrated a CI/CD Pipeline into our development process we decided to modify our Definition of Done as follows:
 
