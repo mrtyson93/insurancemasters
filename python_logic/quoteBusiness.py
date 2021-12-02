@@ -1,12 +1,13 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request, session
+from .helper import *
 
 quotebusiness = Blueprint(
     'quotebusiness', __name__, template_folder='templates')
 
 BUSINESS_SCTRUCTURES = [
-  {"value": "soleproprietorship", "text": "Sole Proprietorship"},
-  {"value": "llc", "text": "LLC"},
-  {"value": "corporate", "text": "Corporate"},
+  {"value": "soleproprietorship", "text": "Sole Proprietorship", "selected": "yes"},
+  {"value": "llc", "text": "LLC", "selected": "no"},
+  {"value": "corporate", "text": "Corporate", "selected": "no"},
 ]
 
 BUSINESS_AGES = [
@@ -53,9 +54,16 @@ COVERAGE_PER_INCIDENT_OPTIONS = [
 ]
 
 
-@quotebusiness.route("/quoteaboutbusiness", methods=['POST'])
+@quotebusiness.route("/quoteaboutbusiness", methods=['POST', 'GET'])
 def quotebusiness_load():
+    global BUSINESS_SCTRUCTURES
+    if request.method == 'POST':
+        session['business_name'] = request.form['txt-field-business-name']
 
-    return render_template('quotebusiness.html', BUSINESS_SCTRUCTURES=BUSINESS_SCTRUCTURES, BUSINESS_AGES=BUSINESS_AGES, EMPLOYEE_COUNTS=EMPLOYEE_COUNTS, REVENUES=REVENUES, BUSINESS_NATURES=BUSINESS_NATURES)
+    if 'business_structures' in session:
+        BUSINESS_SCTRUCTURES = Helper.change_selected_options(BUSINESS_SCTRUCTURES, session['business_structures'])
 
+    return render_template('quotebusiness.html', BUSINESS_SCTRUCTURES=BUSINESS_SCTRUCTURES, BUSINESS_AGES=BUSINESS_AGES,
+                           EMPLOYEE_COUNTS=EMPLOYEE_COUNTS, REVENUES=REVENUES, BUSINESS_NATURES=BUSINESS_NATURES,
+                           bs=session['business_structures'])
 

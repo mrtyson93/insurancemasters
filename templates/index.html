@@ -10,12 +10,13 @@
       <form action="./quoteaboutyou" method="post">
         <strong>Select Your State: </strong>
         <select name="select-state-dropdown">
-          <option value="CA" name="state-option-CA">California</option>
-          <option value="TX" name="state-option-TX">Texas</option>
-          <option value="WA" name="state-option-WA">Washington</option>
-          <option value="FL" name="state-option-FL">Florida</option>
-          <option value="VA" name="state-option-VA">Virginia</option>
+          <option value="CA" name="state-option-CA" {% if selected_state=='CA' %} selected="selected"{% endif %}>California</option>
+          <option value="TX" name="state-option-TX" {% if selected_state=='TX' %} selected="selected"{% endif %}>Texas</option>
+          <option value="WA" name="state-option-WA" {% if selected_state=='WA' %} selected="selected"{% endif %}>Washington</option>
+          <option value="FL" name="state-option-FL" {% if selected_state=='FL' %} selected="selected"{% endif %}>Florida</option>
+          <option value="VA" name="state-option-VA" {% if selected_state=='VA' %} selected="selected"{% endif %}>Virginia</option>
         </select>
+
         <button type="submit" name="btn-get-quote">Get Quote</button>
       </form>
     </div>

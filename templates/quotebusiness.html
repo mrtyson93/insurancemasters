@@ -38,7 +38,11 @@
           >
           <select name="business_structures" class="col-xs-12">
             {% for business_sctructure in BUSINESS_SCTRUCTURES %}
-            <option value="{{business_sctructure.value}}">
+              {% if business_sctructure.selected == "yes" %}
+                <option value="{{business_sctructure.value}}" selected>
+              {% else %}
+                <option value="{{business_sctructure.value}}" >
+              {% endif %}
               {{business_sctructure.text}}
             </option>
             {% endfor %}
@@ -187,6 +191,8 @@
           value="See Your Quote"
           name="btn-submit-quote-details"
         />
+        <input id="back" type="submit" value="Previous" />
+
       </p>
     </form>
   </div>
@@ -207,6 +213,11 @@
       maxDate: 90,
     });
     $('[data-toggle="tooltip"]').tooltip();
+
+     $("#back").click(function(e) {
+      e.preventDefault();
+      window.location.href = '/quoteaboutyou';
+    });
   });
 </script>
 {% endblock %}

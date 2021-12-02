@@ -49,15 +49,17 @@
           <input
             type="text"
             placeholder="Enter your business name exactly as registered with the state"
+            name="txt-field-business-name"
             required
             maxlength="80"
+            value="{{business_name}}"
           />
         </div>
       </div>
       <div class="row">
         <div class="col-md-8">
           Firm d/b/a
-          <input type="text" placeholder="Enter legal name under business or operation is Doing Business As" maxlength="80" />
+          <input type="text" placeholder="Enter legal name under business or operation is Doing Business As" name="txt-field-firm-dba" maxlength="80" />
         </div>
       </div>
       <div class="row">
@@ -155,6 +157,7 @@
           value="Continue"
           name="btn-continue-about-business"
         />
+        <input onclick="window.location.href = '/index';" type="submit" value="Previous" />
       </p>
     </form>
   </div>

@@ -1,5 +1,5 @@
 from dotenv import load_dotenv
-from flask import Flask, render_template
+from flask import Flask, render_template, session
 import os
 from python_logic import quoteYou, quoteBusiness, result, contact, quote, faq
 # from quoteYou import quoteyou
@@ -28,4 +28,7 @@ app.register_blueprint(faq.faq)
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template('index.html')
+    if 'insured_state' in session:
+        selected_state = session['insured_state']
+
+    return render_template('index.html', selected_state=selected_state)

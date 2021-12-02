@@ -1,6 +1,6 @@
 import locale
 
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, session
 from .quote import Question, InsuranceQuote
 from .quoteBusiness import DEDUCTIBLE_OPTIONS, COVERAGE_PER_INCIDENT_OPTIONS
 
@@ -20,10 +20,12 @@ def format_currency(value):
 @result.route("/result", methods=['POST'])
 def result_load():
     # TODO add business logic here
+
     your_quote = BASE_QUOTE
     questions = []
     # BUSINESS_SCTRUCTURES
     business_structure_value = request.form['business_structures']
+    session['business_structures'] = business_structure_value
     questions.append(Question("BUSINESS_SCTRUCTURES", business_structure_value, 1))
     # BUSINESS_AGES
     business_ages_value = request.form['business_ages']
