@@ -28,6 +28,7 @@ app.register_blueprint(faq.faq)
 @app.route('/')
 @app.route('/index')
 def index():
+    selected_state = 'CA'
     if 'insured_state' in session:
         selected_state = session['insured_state']
 
