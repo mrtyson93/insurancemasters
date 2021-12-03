@@ -38,11 +38,7 @@
           >
           <select name="business_structures" class="col-xs-12">
             {% for business_sctructure in BUSINESS_SCTRUCTURES %}
-              {% if business_sctructure.selected == "yes" %}
-                <option value="{{business_sctructure.value}}" selected>
-              {% else %}
-                <option value="{{business_sctructure.value}}" >
-              {% endif %}
+                <option value="{{business_sctructure.value}}" {% if business_sctructure.selected=="yes" %} selected {% endif %}>
               {{business_sctructure.text}}
             </option>
             {% endfor %}
@@ -173,6 +169,7 @@
             <input
               type="text"
               id="startpicker"
+              name="startpicker"
               placeholder="mm/dd/yyyy"
               pattern="(0[1-9]|1[012])[-
             /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d"
@@ -180,6 +177,7 @@
               required
               maxlength="10"
               class="col-xs-12"
+              value="{{coverage_start_date}}"
             />
           </div>
         </div>

@@ -32,7 +32,7 @@ function changeOptions(){
             final_quote *= 0.75;
             break;
     }
-
+    $("#final_quote_value").val(final_quote);
     $("#final_quote").html(formatToCurrency(final_quote));
 }
 

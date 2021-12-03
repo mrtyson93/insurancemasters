@@ -1,3 +1,6 @@
+import locale
+locale.setlocale(locale.LC_ALL, 'en_CA.UTF-8')
+
 
 class Helper(object):
     @staticmethod
@@ -9,4 +12,8 @@ class Helper(object):
                 data_structure[index]['selected'] = "no"
 
         return data_structure
+
+    @staticmethod
+    def format_currency(value):
+        return locale.currency(value, symbol=True, grouping=True)
 

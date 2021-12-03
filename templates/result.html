@@ -13,8 +13,8 @@
     <div class="row">
       <h4 class="entry-title"><b>Quote Details</b></h4>
     </div>
+     <form action="/payment" method="post" class="contact-form">
     <div class="row">
-      <form class="contact-form">
         <div class="col-md-4">
           Deductible Options:<span style="color: red">*</span>
           <span
@@ -31,7 +31,7 @@
             class="col-xs-12"
           >
             {% for deductible in DEDUCTIBLE_OPTIONS %}
-            <option value="{{deductible.value}}">{{deductible.text}}</option>
+            <option value="{{deductible.value}}"  {% if deductible.selected=="yes" %} selected {% endif %} >{{deductible.text}}</option>
             {% endfor %}
           </select>
         </div>
@@ -43,38 +43,38 @@
             data-placement="right"
             data-html="true"
             title="You may select the option for coverage per incident - the maximum amount of liability covered per incident including your deductible."
-            >&nbsp;&nbsp;&#9432;</span
-          >
+            >&nbsp;&nbsp;&#9432;</span>
           <select
             name="coverage_per_incident_options"
             onchange="changeOptions()"
-            class="col-xs-12"
-          >
+            class="col-xs-12">
             {% for coverage in COVERAGE_PER_INCIDENT_OPTIONS %}
-            <option value="{{coverage.value}}">{{coverage.text}}</option>
+            <option value="{{coverage.value}}"  {% if coverage.selected=="yes" %} selected {% endif %} >{{coverage.text}}</option>
             {% endfor %}
           </select>
         </div>
-      </form>
     </div>
     <div class="row">
       <input type="hidden" name="quote_value" value="{{ quote }}" />
+      <input type="hidden" id="final_quote_value" name="final_quote_value" value="{{ quote }}">
       <h2>
         <b>Your Monthly Premium: </b>
         <span id="final_quote">{{ display_quote }}</span>
+
       </h2>
       <p>
         <b
           >Please call us NOW at +1 623-810-5235 and get insured by one of our
-          qualified underwriting agents.</b
-        >
+          qualified underwriting agents.</b>
       </p>
-      <form>
+
       <p class="text-left">
+         <input type="submit" value="Purchase Now" name="btn-purchase-now" />
         <input id="back"  type="submit" value="Previous" />
       </p>
-      </form>
+
     </div>
+        </form>
   </div>
 </div>
 {% endblock %} {% block footer %}

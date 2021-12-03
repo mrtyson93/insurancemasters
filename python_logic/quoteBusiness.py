@@ -40,30 +40,22 @@ BUSINESS_NATURES = [
   {"value": "other", "text": "Other"},
 ]
 
-DEDUCTIBLE_OPTIONS = [
-  {"value": "1", "text": "Default $0"},
-  {"value": "2", "text": "$2,500"},
-  {"value": "3", "text": "$5,000"},
-  {"value": "4", "text": "$10,000"},
-]
 
-COVERAGE_PER_INCIDENT_OPTIONS = [
-  {"value": "1", "text": "Default $1M"},
-  {"value": "2", "text": "$500K"},
-  {"value": "3", "text": "$250K"},
-]
 
 
 @quotebusiness.route("/quoteaboutbusiness", methods=['POST', 'GET'])
 def quotebusiness_load():
     global BUSINESS_SCTRUCTURES
+    startpicker_value = ""
     if request.method == 'POST':
         session['business_name'] = request.form['txt-field-business-name']
 
     if 'business_structures' in session:
         BUSINESS_SCTRUCTURES = Helper.change_selected_options(BUSINESS_SCTRUCTURES, session['business_structures'])
+    if 'coverage_start_date' in session:
+        startpicker_value = session['coverage_start_date']
 
     return render_template('quotebusiness.html', BUSINESS_SCTRUCTURES=BUSINESS_SCTRUCTURES, BUSINESS_AGES=BUSINESS_AGES,
                            EMPLOYEE_COUNTS=EMPLOYEE_COUNTS, REVENUES=REVENUES, BUSINESS_NATURES=BUSINESS_NATURES,
-                           bs=session['business_structures'])
+                           bs=session['business_structures'], coverage_start_date=startpicker_value)
 
