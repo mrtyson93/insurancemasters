@@ -48,7 +48,6 @@ def quotebusiness_load():
     global BUSINESS_SCTRUCTURES
     # set default form value
     startpicker_value = ""
-
     if request.method == 'POST':
         session['business_name'] = request.form['txt-field-business-name']
 
@@ -59,5 +58,5 @@ def quotebusiness_load():
 
     return render_template('quotebusiness.html', BUSINESS_SCTRUCTURES=BUSINESS_SCTRUCTURES, BUSINESS_AGES=BUSINESS_AGES,
                            EMPLOYEE_COUNTS=EMPLOYEE_COUNTS, REVENUES=REVENUES, BUSINESS_NATURES=BUSINESS_NATURES,
-                           bs=session['business_structures'], coverage_start_date=startpicker_value)
+                           coverage_start_date=startpicker_value)
 
