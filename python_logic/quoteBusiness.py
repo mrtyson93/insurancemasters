@@ -46,7 +46,9 @@ BUSINESS_NATURES = [
 @quotebusiness.route("/quoteaboutbusiness", methods=['POST', 'GET'])
 def quotebusiness_load():
     global BUSINESS_SCTRUCTURES
+    # set default form value
     startpicker_value = ""
+
     if request.method == 'POST':
         session['business_name'] = request.form['txt-field-business-name']
 

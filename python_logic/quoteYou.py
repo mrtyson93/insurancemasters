@@ -6,6 +6,9 @@ quoteyou = Blueprint(
 
 @quoteyou.route("/quoteaboutyou", methods=['POST', 'GET'])
 def quoteyou_load():
+    # default form entry
+    selected_state = 'CA'
+    business_name = ""
     if request.method == 'POST':
         selected_state = request.form['select-state-dropdown']
         session['insured_state'] = selected_state.strip()

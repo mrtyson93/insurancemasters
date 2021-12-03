@@ -11,7 +11,7 @@ def payment_load():
     # load quote information
     business_name = "N/A"
     coverage_start_date = "N/A"
-    final_quote = 0
+    final_quote = BASE_QUOTE
     deductible_options = "1"
     coverage_per_incident_options = "1"
     if request.method == 'POST':
