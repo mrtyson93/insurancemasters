@@ -2414,3 +2414,8 @@ form input[type="reset"]:focus {
   width: 100%;
   text-align: center;
 }
+
+.no-margin-top-bottom{
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}

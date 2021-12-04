@@ -1,14 +1,7 @@
 from dotenv import load_dotenv
 from flask import Flask, render_template, session
 import os
-from python_logic import quoteYou, quoteBusiness, result, contact, quote, faq, payment
-# from quoteYou import quoteyou
-# from quoteBusiness import quotebusiness
-# from about import about
-# from result import result
-# from contact import contact
-
-
+from python_logic import quoteYou, quoteBusiness, result, contact, quote, faq, payment, confirmation, certificate
 
 # Load environment
 load_dotenv('.env')
@@ -24,7 +17,8 @@ app.register_blueprint(result.result)
 app.register_blueprint(contact.contact)
 app.register_blueprint(faq.faq)
 app.register_blueprint(payment.payment)
-
+app.register_blueprint(confirmation.confirmation)
+app.register_blueprint(certificate.certificate)
 
 @app.route('/')
 @app.route('/index')

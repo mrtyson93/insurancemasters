@@ -18,7 +18,7 @@
     <div class="fullwidth-block">
         <div class="container">
             <h1 class="entry-title">Review & Pay</h1>
-            <form action="/confirmation" method="post">
+
             <div class="summary-title">
                 <h1>Quote Information</h1>
 
@@ -185,12 +185,16 @@
             </div>
                 <br>
            <p class="text-left">
-<!--        <input-->
-<!--          type="submit"-->
-<!--          value="Confirm"-->
-<!--          name="btn-confirm"-->
-<!--          disabled-->
-<!--        />-->
+         <form action="/confirmation" method="post" onsubmit="return validateform()">
+            <input type="hidden" name="name" value="">
+            <input type="hidden" name="cardnumber" value="">
+
+        <input
+          type="submit"
+          value="Confirm"
+          name="btn-confirm"
+
+        />
         <input id="back" type="submit" value="Previous" />
       </p>
            </form>
@@ -203,8 +207,8 @@
 {% endblock %}
 
 {% block footer %}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/imask/3.4.0/imask.min.js" defer></script>
-<script src="{{ url_for('static', filename='js/payment.js') }}" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/imask/3.4.0/imask.min.js"></script>
+<script src="{{ url_for('static', filename='js/payment.js') }}"></script>
 <script>
   $(function () {
     $("#back").click(function(e) {
@@ -213,6 +217,33 @@
     });
   });
 
+  function validateform(){
+      if ($("#name").val().length == 0){
+          alert('Please enter the name show on your credit.');
+          return false;
+      }
+      if ($("#cardnumber").val().length == 0){
+          alert('Please enter a credit card number.');
+          return false;
+      }
+      if ($("#expirationdate").val().length == 0){
+          alert('Please enter a credit card expiry date.');
+          return false;
+      }
+      if ($("#securitycode").val().length == 0){
+          alert('Please enter a credit card security code.');
+          return false;
+      }
+
+      $("input[name=name]").val($("#name").val());
+      $("input[name=cardnumber]").val($("#cardnumber").val());
+      // alert('name:'+ $("#name").val());
+      //  alert('credit card:'+ $("#cardnumber").val());
+      //
+      //  alert('name 2:'+ $("input[name=name]").val());
+      //  alert('credit card 2:'+ $("input[name=cardnumber]").val());
+      return true;
+  }
 
 </script>
 {% endblock %}
