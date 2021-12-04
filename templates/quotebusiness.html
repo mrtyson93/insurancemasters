@@ -59,6 +59,7 @@
             <option
               value="{{business_age.value}}"
               name="Age-Option-{{business_age.text}}"
+               {% if business_age.selected=="yes" %} selected {% endif %}
             >
               {{business_age.text}}
             </option>
@@ -77,7 +78,7 @@
           >
           <select name="employee_counts" class="col-xs-12">
             {% for employee_count in EMPLOYEE_COUNTS %}
-            <option value="{{employee_count.value}}">
+            <option value="{{employee_count.value}}"  {% if employee_count.selected=="yes" %} selected {% endif %}>
               {{employee_count.text}}
             </option>
             {% endfor %}
@@ -96,8 +97,8 @@
             >&nbsp;&nbsp;&#9432;</span
           >
           <select name="revenues_last_year" class="col-xs-12">
-            {% for rev in REVENUES %}
-            <option value="{{rev.value}}">{{rev.text}}</option>
+            {% for rev in LAST_YEAR_REVENUES %}
+            <option value="{{rev.value}}" {% if rev.selected=="yes" %} selected {% endif %}>{{rev.text}}</option>
             {% endfor %}
           </select>
         </div>
@@ -113,7 +114,7 @@
           >
           <select name="revenues" class="col-xs-12">
             {% for rev in REVENUES %}
-            <option name="{{rev.text}}" value="{{rev.value}}">
+            <option name="{{rev.text}}" value="{{rev.value}}"  {% if rev.selected=="yes" %} selected {% endif %}>
               {{rev.text}}
             </option>
             {% endfor %}
@@ -138,12 +139,12 @@
             class="col-xs-12"
           >
             {% for nature in BUSINESS_NATURES %}
-            <option value="{{nature.value}}">{{nature.text}}</option>
+            <option value="{{nature.value}}" {% if nature.selected=="yes" %} selected {% endif %}>{{nature.text}}</option>
             {% endfor %}
           </select>
         </div>
       </div>
-      <div class="row" id="optionalBusinessNatureRow" style="display: none">
+      <div class="row" id="optionalBusinessNatureRow" style="{% if show_other==False %}display: none{% endif %}">
         <div class="col-md-8">
           <input
             type="text"
@@ -151,6 +152,7 @@
             name="txt-field-other-business-nature"
             maxlength="80"
             class="col-xs-12"
+            value="{{business_natures_other}}"
           />
         </div>
       </div>

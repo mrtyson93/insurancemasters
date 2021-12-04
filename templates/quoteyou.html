@@ -29,6 +29,7 @@
             name="txt-field-first-name"
             required
             maxlength="32"
+            value="{{first_name}}"
           />
         </div>
         <div class="col-md-4">
@@ -39,6 +40,7 @@
             name="txt-field-last-name"
             required
             maxlength="32"
+            value="{{last_name}}"
           />
         </div>
         <div class="col-md-4">&nbsp;</div>
@@ -59,7 +61,7 @@
       <div class="row">
         <div class="col-md-8">
           Firm d/b/a
-          <input type="text" placeholder="Enter legal name under business or operation is Doing Business As" name="txt-field-firm-dba" maxlength="80" />
+          <input type="text" placeholder="Enter legal name under business or operation is Doing Business As" name="txt-field-firm-dba" maxlength="80" value="{{firm_dba}}" />
         </div>
       </div>
       <div class="row">
@@ -67,8 +69,10 @@
           Formerly known as
           <input
             type="text"
+            name="txt-field-former-name"
             placeholder="Enter the former name of your business"
             maxlength="80"
+            value="{{former_name}}"
           />
         </div>
       </div>
@@ -79,6 +83,8 @@
           <input
             type="text"
             placeholder="Enter a valid business phone eg. (+1 623 810 5235)"
+            name = "txt-field-phone"
+            value="{{phone_number}}"
             required
             maxlength="15"
             oninvalid="this.setCustomValidity('Must be valid phone number')"
@@ -92,6 +98,8 @@
           <input
             type="text"
             placeholder="Enter a valid business email"
+            name="txt-field-email"
+            value="{{email}}"
             required
             maxlength="50"
             oninvalid="this.setCustomValidity('Must be valid email address')"
@@ -118,6 +126,7 @@
             type="text"
             placeholder="Enter business address in which your business is headquartered"
             name="txt-field-address"
+            value="{{business_address}}"
             required
             pattern="^[#.0-9a-zA-Z\s,-]+$"
             maxlength="80"
@@ -127,11 +136,11 @@
       <div class="row">
         <div class="col-md-4">
           <span style="color: red">*</span>City
-          <input type="text" placeholder="Enter the city" required maxlength="32" />
+          <input type="text" name="txt-field-city" value="{{business_city}}" placeholder="Enter the city" required maxlength="32" />
         </div>
         <div class="col-md-2">
           <span style="color: red">*</span>State<br>
-          <select>
+          <select name="select-field-state">
             <option value="CA" {% if selected_state=='CA' %} selected="selected"{% endif %}>California</option>
             <option value="TX" {% if selected_state=='TX' %} selected="selected"{% endif %}>Texas</option>
             <option value="WA" {% if selected_state=='WA' %} selected="selected"{% endif %}>Washington</option>
@@ -143,6 +152,8 @@
           <span style="color: red">*</span>Zip Code
           <input
             type="text"
+            name="txt-field-zip"
+            value="{{business_zip}}"
             placeholder="eg. (12345-6789)"
             required
             oninvalid="this.setCustomValidity('Must be a valid zip code')"
@@ -157,10 +168,21 @@
           value="Continue"
           name="btn-continue-about-business"
         />
-        <input onclick="window.location.href = '/index';" type="submit" value="Previous" />
+        <input id="back" type="submit" value="Previous" />
       </p>
     </form>
   </div>
 </div>
 
+{% endblock %}
+{% block footer %}
+<script>
+  $(function () {
+
+     $("#back").click(function(e) {
+      e.preventDefault();
+      window.location.href = '/index';
+    });
+  });
+</script>
 {% endblock %}
