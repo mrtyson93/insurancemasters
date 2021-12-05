@@ -236,7 +236,7 @@ Used points 10, 20, 30, 40, and 50 as the different size options.
 
 - **Daily Scrums**: Scrums were completed in our slack channel when not able to meet on weekends due to time constraints of people being located around the world. Documentation of each days minutes are located in the minutes folder of our github repo. These minutes include what everyone did, what they plan to do, and what the impediments were, if any. [Minutes](https://github.com/mrtyson93/insurancemasters/tree/main/ProjectManagement/minutes) Here is a link directly to one days documentation of a scrum meeting: [TBD](TBD)
 
-- **Impediment Removal Plan**: Swarm the impediment as a team to come up with a solution or workaround to unblock the impediment. Examples TBD
+- **Impediment Removal Plan**: Swarm the impediment as a team to come up with a solution or workaround to unblock the impediment. (Explain more in depth later) Technical impediment to email the certificate of insurance, solution was to embed certificate into the site and allow the user to download the certificate.
 
 - **Sprint board update and Burndown Updates**: Screenshots of burndown updates are above. Screenshots of kanban board below, individuals who completed the tasks are assigned to the tasks on the kanban board ![Alt text](/ProjectManagement/Sprint3/backlog1.png?raw=true) ![Alt text](/ProjectManagement/Sprint3/backlog2.png?raw=true)
 
@@ -244,6 +244,7 @@ Used points 10, 20, 30, 40, and 50 as the different size options.
 
   - 12/04 Pair Programming
     ![Alt text](/ProjectManagement/Sprint3/pairprogramming1.png?raw=true)
+  - 12/05 Mob Programming ![Alt text](/ProjectManagement/Sprint3/mobprogramming.png?raw=true)
 
 - **Tests**: The unit tests are in the python_logic\test_quote.py file. [File here](https://github.com/mrtyson93/insurancemasters/blob/main/python_logic/test_quote.py). (TBD descrption of how many tests and screenshot and BDD)
 
