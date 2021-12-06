@@ -1,61 +1,97 @@
 {% extends "layout.html" %} {% block content %}
 <div class="breadcrumbs">
-    <div class="container">
-        <a href="./index">Home</a>
-        <span>Confirmation of insurance purchase</span>
-    </div>
+  <div class="container">
+    <a href="./index">Home</a>
+    <span>Confirmation of Insurance Purchase</span>
+  </div>
 </div>
 
 <div class="page">
-    <div class="fullwidth-block">
-        <div class="container">
-            <h1 class="entry-title">Confirmation</h1>
-            <p>
-                Thank you for choosing Insurance Masters. You can now download your <a href="/certificate" target="_blank"> Insurance Certificate</a>. If you have any questions or concerns, feel free to call us at +1 623-810-5235.
-            </p>
-            <p>
-            <div class="col-sm-6">
-                <div class="row">
-                    <div class="col-sm-6 text-center">
-                        Receipt<br>
-                        Insurance Masters<br>
-                        +1 623-810-5235<br>
-                        ********************
-                    </div>
-                </div>
-                <div class="row no-margin-top-bottom">
-                    <div class="text-left col-sm-2">Date:</div>
-                    <div class="text-right col-sm-4">{{cc_date}}</div>
-                </div>
-                <div class="row no-margin-top-bottom">
-                    <div class="text-left col-sm-2">Time:</div>
-                    <div class="text-right col-sm-4">{{cc_time}}</div>
-                </div>
-                <div class="row no-margin-top-bottom">
-                    <div class="text-left col-sm-2">Name:</div>
-                    <div class="text-right col-sm-4">{{cc_name}}</div>
-                </div>
-                <div class="row no-margin-top-bottom">
-                    <div class="text-left col-sm-2">ACCT:</div>
-                    <div class="text-right col-sm-4">**** **** **** {{cc_number}}</div>
-                </div>
-                <div class="row no-margin-top-bottom">
-                    <div class="text-left col-sm-3">AUTH CODE:</div>
-                    <div class="text-right col-sm-3">{{cc_auth_code}}</div>
-                </div>
-                <div class="row no-margin-top-bottom">
-                    <div class="text-left col-sm-2">TOTAL:</div>
-                    <div class="text-right col-sm-4">{{cc_amount}}</div>
-                </div>
+  <div class="fullwidth-block">
+    <div class="container">
+      <h1 class="h1">Confirmation of Insurance Purchase</h1>
+      <p>
+        Thank you for choosing Insurance Masters. You can now download your
+        <a href="/certificate" target="_blank"> Insurance Certificate</a>. Your
+        credit card ending with {{cc_number}} has been charged {{cc_amount}}
+        reflecting your first monthly installment.
+      </p>
+      <div id="printable-receipt" class="row col-sm-6">
+        <div>
+          <div class="row">
+            <div class="col-sm-6 text-center">
+              Receipt<br />
+              Insurance Masters<br />
+              +1 623-810-5235<br />
+              ********************
             </div>
-            <br><br>
-            Please print this page for your record. <button onclick="window.print()">Print Receipt</button>
-            </p>
-            <br>
+          </div>
+          <div class="row no-margin-top-bottom">
+            <div class="text-left col-sm-2">Date:</div>
+            <div class="text-right col-sm-4">{{cc_date}}</div>
+          </div>
+          <div class="row no-margin-top-bottom">
+            <div class="text-left col-sm-2">Time:</div>
+            <div class="text-right col-sm-4">{{cc_time}}</div>
+          </div>
+          <div class="row no-margin-top-bottom">
+            <div class="text-left col-sm-2">Name:</div>
+            <div class="text-right col-sm-4">{{cc_name}}</div>
+          </div>
+          <div class="row no-margin-top-bottom">
+            <div class="text-left col-sm-2">ACCT:</div>
+            <div class="text-right col-sm-4">**** **** **** {{cc_number}}</div>
+          </div>
+          <div class="row no-margin-top-bottom">
+            <div class="text-left col-sm-3">AUTH CODE:</div>
+            <div class="text-right col-sm-3">{{cc_auth_code}}</div>
+          </div>
+          <div class="row no-margin-top-bottom">
+            <div class="text-left col-sm-2">TOTAL:</div>
+            <div class="text-right col-sm-4">{{cc_amount}}</div>
+          </div>
         </div>
-        <!-- .container -->
+        <div>
+          <br /><br />
+          <p>
+            Please print this page for your record.
+            <button onclick="print()">Print Receipt</button>
+          </p>
+          <p>
+            If you have any questions or concerns, feel free to call us at +1
+            623-810-5235.
+          </p>
+        </div>
+      </div>
     </div>
-    <!-- .fullwidth-block -->
+    <!-- .container -->
+  </div>
+  <!-- .fullwidth-block -->
 </div>
 
+<script>
+  $(function () {
+    $("#back").click(function (e) {
+      e.preventDefault();
+      window.location.href = "/result";
+    });
+  });
+
+  function print() {
+    var receipt = document.getElementById("printable-receipt");
+    var windowToPrint = window.open(
+      "",
+      "",
+      "left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0"
+    );
+    windowToPrint.document.write(receipt.innerHTML);
+    windowToPrint.document.write(
+      '<link href="/static/./style.css" type="text/css" rel="stylesheet"/>'
+    );
+    windowToPrint.document.close();
+    windowToPrint.focus();
+    windowToPrint.print();
+    windowToPrint.close();
+  }
+</script>
 {% endblock %}
