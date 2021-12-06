@@ -1,3 +1,4 @@
+<!-- Reference: https://codepen.io/quinlo/pen/YONMEa -->
 {% extends "layout.html" %}
 
 {% block header %}
@@ -43,7 +44,9 @@
                 <div class="col-sm-6">
                         Coverage Per Incident: {{coverage_per_incident_options}}
                 </div>
-
+                <div class="col-sm-6">
+                    Aggregate policy coverage limit: $2M
+                </div>
             </div>
 
 
@@ -165,7 +168,7 @@
                         <input id="name" maxlength="20" type="text">
                     </div>
                     <div class="field-container">
-                        <label for="cardnumber">Card Number</label><span id="generatecard">generate random</span>
+                        <label for="cardnumber">Card Number</label>
                         <input id="cardnumber" type="text" pattern="[0-9]*" inputmode="numeric">
                         <svg id="ccicon" class="ccicon" width="750" height="471" viewBox="0 0 750 471" version="1.1"
                              xmlns="http://www.w3.org/2000/svg"
@@ -188,14 +191,13 @@
          <form action="/confirmation" method="post" onsubmit="return validateform()">
             <input type="hidden" name="name" value="">
             <input type="hidden" name="cardnumber" value="">
-
+        <input id="back" type="submit" value="Previous" />
         <input
           type="submit"
-          value="Confirm"
+          value="Pay Now"
           name="btn-confirm"
-
         />
-        <input id="back" type="submit" value="Previous" />
+        
       </p>
            </form>
         </div>
