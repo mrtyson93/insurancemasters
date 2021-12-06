@@ -85,9 +85,6 @@
       "left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0"
     );
     windowToPrint.document.write(receipt.innerHTML);
-    windowToPrint.document.write(
-      '<link href="/static/./style.css" type="text/css" rel="stylesheet"/>'
-    );
     windowToPrint.document.close();
     windowToPrint.focus();
     windowToPrint.print();
