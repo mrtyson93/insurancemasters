@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, request, session
 from .helper import *
 from .result import *
+from .quote import BASE_QUOTE
 
 payment = Blueprint(
     'payment', __name__, template_folder='templates')

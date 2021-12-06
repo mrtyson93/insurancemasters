@@ -1,12 +1,16 @@
 DO_NOT_INSURE = 0
-
+BASE_QUOTE = 99
 
 class InsuranceQuote(object):
 
     def __init__(self, questions):
         self.questions = questions
 
+    def set_questions(self, questions):
+        self.questions = questions
+
     def render_quote(self):
+        factor = 1
         for question in self.questions:
             if question.structure_name == "BUSINESS_SCTRUCTURES":
                 if question.value == "soleproprietorship":
@@ -71,8 +75,8 @@ class InsuranceQuote(object):
                     question.factor = 0.9
                 else:
                     question.factor = 0.75
-
-
+            factor *= question.factor
+        return factor * BASE_QUOTE
 class Question:
     def __init__(self, structure_name, value, factor):
         self.structure_name = structure_name

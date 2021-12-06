@@ -5,7 +5,6 @@ from .quote import Question, InsuranceQuote
 from .quoteBusiness import *
 from .helper import *
 
-BASE_QUOTE = 99
 DEDUCTIBLE_OPTIONS = [
   {"value": "1", "text": "Default $0", "selected": "yes"},
   {"value": "2", "text": "$2,500", "selected": "no"},
@@ -32,8 +31,6 @@ def result_load():
     # TODO add business logic here
     # default selection values
     global DEDUCTIBLE_OPTIONS, COVERAGE_PER_INCIDENT_OPTIONS
-    your_quote = BASE_QUOTE
-    final_quote = BASE_QUOTE
     questions = []
     business_structure_value = "soleproprietorship"
     business_ages_value = "0.5"
@@ -91,19 +88,14 @@ def result_load():
     questions.append(Question("EMPLOYEE_COUNTS", employee_counts_value, 1))
     questions.append(Question("REVENUES", revenues_value, 1))
     questions.append(Question("BUSINESS_NATURES", business_natures_value, 1))
-    questions.append(Question("BUSINESS_SCTRUCTURES", business_structure_value, 1))
 
     quote = InsuranceQuote(questions)
-    quote.render_quote()
-    for q in questions:
-        your_quote *= q.factor
+    your_quote = quote.render_quote()
 
     questions.append(Question("DEDUCTIBLE_OPTIONS", deductible_options_value, 1))
     questions.append(Question("COVERAGE_PER_INCIDENT_OPTIONS", coverage_per_incident_options_value, 1))
     quote = InsuranceQuote(questions)
-    quote.render_quote()
-    for q in questions:
-        final_quote *= q.factor
+    final_quote = quote.render_quote()
 
     return render_template('result.html', display_quote=Helper.format_currency(final_quote),
                            quote=your_quote,
