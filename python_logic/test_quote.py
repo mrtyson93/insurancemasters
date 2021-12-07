@@ -4,6 +4,39 @@ from .quote import Question, InsuranceQuote, DO_NOT_INSURE
 
 
 class TestQuote(unittest.TestCase):
+
+    def test_valid_question_type_business_structures(self):
+        question = Question("BUSINESS_SCTRUCTURES", "dummy", 1)
+        self.assertEqual(type(question), Question)
+
+    def test_valid_question_type_business_ages(self):
+        question = Question("BUSINESS_AGES", "dummy", 1)
+        self.assertEqual(type(question), Question)
+
+    def test_valid_question_type_employee_counts(self):
+        question = Question("EMPLOYEE_COUNTS", "dummy", 1)
+        self.assertEqual(type(question), Question)
+
+    def test_valid_question_type_revenues(self):
+        question = Question("REVENUES", "dummy", 1)
+        self.assertEqual(type(question), Question)
+
+    def test_valid_question_type_business_natures(self):
+        question = Question("BUSINESS_NATURES", "dummy", 1)
+        self.assertEqual(type(question), Question)
+
+    def test_valid_question_type_deductible_options(self):
+        question = Question("DEDUCTIBLE_OPTIONS", "dummy", 1)
+        self.assertEqual(type(question), Question)
+
+    def test_valid_question_type_coverage_per_incident(self):
+        question = Question("COVERAGE_PER_INCIDENT_OPTIONS", "dummy", 1)
+        self.assertEqual(type(question), Question)
+
+    def test_invalid_question_type(self):
+        with self.assertRaises(ValueError):
+            Question("BAD_QUESTION_TYPE", "dummy", 1)
+
     def test_business_structure_sole_proprietorship(self):
         questions = [Question("BUSINESS_SCTRUCTURES", "soleproprietorship", 1)]
         quote = InsuranceQuote(questions)
@@ -21,6 +54,12 @@ class TestQuote(unittest.TestCase):
         quote = InsuranceQuote(questions)
         quote.render_quote()
         self.assertEqual(2, questions[0].factor)
+
+    def test_business_structure_donotinsure(self):
+        questions = [Question("BUSINESS_SCTRUCTURES", "dummy", 1)]
+        quote = InsuranceQuote(questions)
+        quote.render_quote()
+        self.assertEqual(DO_NOT_INSURE, questions[0].factor)
 
     def test_business_age_less_than_a_year(self):
         questions = [Question("BUSINESS_AGES", "0.5", 1)]
@@ -46,6 +85,12 @@ class TestQuote(unittest.TestCase):
         quote.render_quote()
         self.assertEqual(1, questions[0].factor)
 
+    def test_business_age_do_not_insure(self):
+        questions = [Question("BUSINESS_AGES", "dummy", 1)]
+        quote = InsuranceQuote(questions)
+        quote.render_quote()
+        self.assertEqual(DO_NOT_INSURE, questions[0].factor)
+
     def test_employee_counts_1(self):
         questions = [Question("EMPLOYEE_COUNTS", "1", 1)]
         quote = InsuranceQuote(questions)
@@ -63,6 +108,12 @@ class TestQuote(unittest.TestCase):
         quote = InsuranceQuote(questions)
         quote.render_quote()
         self.assertEqual(1.2, questions[0].factor)
+
+    def test_employee_counts_donotinsure(self):
+        questions = [Question("EMPLOYEE_COUNTS", "dummy", 1)]
+        quote = InsuranceQuote(questions)
+        quote.render_quote()
+        self.assertEqual(DO_NOT_INSURE, questions[0].factor)
 
     def test_revenues_less_than_250k(self):
         questions = [Question("REVENUES", "1", 1)]
@@ -87,6 +138,12 @@ class TestQuote(unittest.TestCase):
         quote = InsuranceQuote(questions)
         quote.render_quote()
         self.assertEqual(1.15, questions[0].factor)
+
+    def test_revenues_donotinsure(self):
+        questions = [Question("REVENUES", "dummy", 1)]
+        quote = InsuranceQuote(questions)
+        quote.render_quote()
+        self.assertEqual(DO_NOT_INSURE, questions[0].factor)
 
     def test_business_nature_manufacture(self):
         questions = [Question("BUSINESS_NATURES", "1", 1)]
@@ -118,6 +175,12 @@ class TestQuote(unittest.TestCase):
         quote.render_quote()
         self.assertEqual(1, questions[0].factor)
 
+    def test_business_nature_donotinsure(self):
+        questions = [Question("BUSINESS_NATURES", "dummy", 1)]
+        quote = InsuranceQuote(questions)
+        quote.render_quote()
+        self.assertEqual(DO_NOT_INSURE, questions[0].factor)
+
     def test_deductible_options_default(self):
         questions = [Question("DEDUCTIBLE_OPTIONS", "1", 1)]
         quote = InsuranceQuote(questions)
@@ -142,6 +205,13 @@ class TestQuote(unittest.TestCase):
         quote.render_quote()
         self.assertEqual(0.75, questions[0].factor)
 
+    def test_deductible_options_donotinsure(self):
+        questions = [Question("DEDUCTIBLE_OPTIONS", "dummy", 1)]
+        quote = InsuranceQuote(questions)
+        quote.render_quote()
+        self.assertEqual(DO_NOT_INSURE, questions[0].factor)
+
+
     def test_coverage_per_incident_options_1M(self):
         questions = [Question("COVERAGE_PER_INCIDENT_OPTIONS", "1", 1)]
         quote = InsuranceQuote(questions)
@@ -159,3 +229,10 @@ class TestQuote(unittest.TestCase):
         quote = InsuranceQuote(questions)
         quote.render_quote()
         self.assertEqual(0.75, questions[0].factor)
+
+    def test_coverage_per_incident_options_donotinsure(self):
+        questions = [Question("COVERAGE_PER_INCIDENT_OPTIONS", "dummy", 1)]
+        quote = InsuranceQuote(questions)
+        quote.render_quote()
+        self.assertEqual(DO_NOT_INSURE, questions[0].factor)
+

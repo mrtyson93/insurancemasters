@@ -1,5 +1,14 @@
 DO_NOT_INSURE = 0
 BASE_QUOTE = 99
+VALID_QUESTION_TYPES = [
+    "BUSINESS_SCTRUCTURES",
+    "BUSINESS_AGES",
+    "EMPLOYEE_COUNTS",
+    "REVENUES",
+    "BUSINESS_NATURES",
+    "DEDUCTIBLE_OPTIONS",
+    "COVERAGE_PER_INCIDENT_OPTIONS"
+]
 
 class InsuranceQuote(object):
 
@@ -17,8 +26,10 @@ class InsuranceQuote(object):
                     question.factor = 1.5
                 elif question.value == "llc":
                     question.factor = 1
-                else:
+                elif question.value == "corporate":
                     question.factor = 2
+                else:
+                    question.factor = DO_NOT_INSURE
             if question.structure_name == "BUSINESS_AGES":
                 if question.value == "0.5":
                     question.factor = 1.5
@@ -26,8 +37,10 @@ class InsuranceQuote(object):
                     question.factor = 1.2
                 elif question.value == "20":
                     question.factor = 1.1
-                else:
+                elif question.value == "25":
                     question.factor = 1
+                else:
+                    question.factor = DO_NOT_INSURE
             if question.structure_name == "EMPLOYEE_COUNTS":
                 if question.value == "1":
                     question.factor = 1
@@ -57,8 +70,10 @@ class InsuranceQuote(object):
                     question.factor = 0.9
                 elif question.value == "4":
                     question.factor = 0.8
-                else:
+                elif question.value == "other":
                     question.factor = 1
+                else:
+                    question.factor = DO_NOT_INSURE
             if question.structure_name == "DEDUCTIBLE_OPTIONS":
                 if question.value == "1":
                     question.factor = 1
@@ -66,19 +81,26 @@ class InsuranceQuote(object):
                     question.factor = 0.9
                 elif question.value == "3":
                     question.factor = 0.8
-                else:
+                elif question.value == "4":
                     question.factor = 0.75
+                else:
+                    question.factor = DO_NOT_INSURE
             if question.structure_name == "COVERAGE_PER_INCIDENT_OPTIONS":
                 if question.value == "1":
                     question.factor = 1
                 elif question.value == "2":
                     question.factor = 0.9
-                else:
+                elif question.value == "3":
                     question.factor = 0.75
+                else:
+                    question.factor = DO_NOT_INSURE
             factor *= question.factor
         return factor * BASE_QUOTE
 class Question:
+
     def __init__(self, structure_name, value, factor):
+        if structure_name not in VALID_QUESTION_TYPES:
+            raise ValueError("Invalid Question Type")
         self.structure_name = structure_name
         self.value = value
         self.factor = factor
