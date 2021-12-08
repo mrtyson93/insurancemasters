@@ -232,13 +232,16 @@ Used points 10, 20, 30, 40, and 50 as the different size options.
 
 - **Kanban board link**: [Miro Board](https://miro.com/app/board/o9J_lnCeYTY=/?invite_link_id=692868496345) The board is split into Sprint 1, Sprint 2, and Sprint 3 which are clearly labeled.
 
-- **Burndown chart**: Also on the same Miro Board and split out by sprint: [Miro Board](https://miro.com/app/board/o9J_lnCeYTY=/?invite_link_id=692868496345) Miro doesnt keep the formatting of the burndown chart line so progressive screenshots of it below. ![Alt text](/ProjectManagement/Sprint3/burndown1.png?raw=true) ![Alt text](/ProjectManagement/Sprint2/burndown3.png?raw=true)
+- **Burndown chart**: Also on the same Miro Board and split out by sprint: [Miro Board](https://miro.com/app/board/o9J_lnCeYTY=/?invite_link_id=692868496345) Miro doesnt keep the formatting of the burndown chart line so progressive screenshots of it below. ![Alt text](/ProjectManagement/Sprint3/burndown1.png?raw=true) ![Alt text](/ProjectManagement/Sprint3/burndown2.png?raw=true) ![Alt text](/ProjectManagement/Sprint3/burndown3.png?raw=true)
 
 - **Daily Scrums**: Scrums were completed in our slack channel when not able to meet on weekends due to time constraints of people being located around the world. Documentation of each days minutes are located in the minutes folder of our github repo. These minutes include what everyone did, what they plan to do, and what the impediments were, if any. [Minutes](https://github.com/mrtyson93/insurancemasters/tree/main/ProjectManagement/minutes) Here is a link directly to one days documentation of a scrum meeting: [TBD](TBD)
 
-- **Impediment Removal Plan**: Swarm the impediment as a team to come up with a solution or workaround to unblock the impediment. (Explain more in depth later) Technical impediment to email the certificate of insurance, solution was to embed certificate into the site and allow the user to download the certificate.
+- **Impediment Removal Plan**: Swarm the impediment as a team to come up with a solution or workaround to unblock the impediment. Example Impediments from this sprint:
 
-- **Sprint board update and Burndown Updates**: Screenshots of burndown updates are above. Screenshots of kanban board below, individuals who completed the tasks are assigned to the tasks on the kanban board ![Alt text](/ProjectManagement/Sprint3/backlog1.png?raw=true) ![Alt text](/ProjectManagement/Sprint3/backlog2.png?raw=true)
+  - There was a technical impediment around emailing the certificate of insurance to a user after purchasing insurance, the workaround we came up with was to embed certificate into the site and allow the user to download the certificate themselves
+  - There was an AWS outage that broke our CI/CD pipelines so we couldn't deliver new feature to our site. Our solution was to keep developing locally and pushing to our main branch. Based on our experience we expected the outage to be fixed in a day, then we would kick off the pipeline manually for this one instance. (This worked)
+
+- **Sprint board update and Burndown Updates**: Screenshots of burndown updates are above. Screenshots of kanban board below, individuals who completed the tasks are assigned to the tasks on the kanban board ![Alt text](/ProjectManagement/Sprint3/backlog1.png?raw=true) ![Alt text](/ProjectManagement/Sprint3/backlog2.png?raw=true) ![Alt text](/ProjectManagement/Sprint3/backlog3.png?raw=true) ![Alt text](/ProjectManagement/Sprint3/backlog4.png?raw=true)
 
 - **Pair/mob programming evidence**:
 
@@ -246,30 +249,30 @@ Used points 10, 20, 30, 40, and 50 as the different size options.
     ![Alt text](/ProjectManagement/Sprint3/pairprogramming1.png?raw=true)
   - 12/05 Mob Programming ![Alt text](/ProjectManagement/Sprint3/mobprogramming.png?raw=true)
 
-- **Tests**: The unit tests are in the python_logic\test_quote.py file. [File here](https://github.com/mrtyson93/insurancemasters/blob/main/python_logic/test_quote.py). (TBD descrption of how many tests and screenshot and BDD)
+- **Tests**: The unit tests are in the python_logic\test_quote.py file. [File here](https://github.com/mrtyson93/insurancemasters/blob/main/python_logic/test_quote.py). There are 41 unit tests, up from 26 last sprint. There is also one Cucumber Gherkin BDD test located [here](https://github.com/mrtyson93/insurancemasters/blob/main/GetQuote.feature), the steps of said BDD test are [here](https://github.com/mrtyson93/insurancemasters/blob/main/steps/GetQuote.py) Below is a screenshot of the 41 unit tests and 1 BDD test running in our ci/cd pipeline. ![Alt text](/ProjectManagement/Sprint3/testscicd.png?raw=true)
 
-- **Sprint Review**: TBD
+- **Sprint Review**: To be conducted in final class
 
 - **Working Software**: Link to Insurance Masters: [Insurance Masters](https://insurancemaster.herokuapp.com/) Screenshot Proof:
-  ![Alt text](TBD)
+  ![Alt text](/ProjectManagement/Sprint3/workingsoftwareproof.png?raw=true)
 
-- **Stakeholder attending Sprint Review Proof**:
-  - **Richard is our stakeholder**![Alt text](/ProjectManagement/Sprint2/sprintreviewstakeholder.png?raw=true)
 - **Continuous Integration**:
-  (TBD updated screenshots for sprint 3)
-  We are using herokus pipeline feature to implement our CI pipeline. ![Alt text](/ProjectManagement/Sprint2/cd1.png?raw=true) We only have one branch that we use which is the main branch. ![Alt text](/ProjectManagement/Sprint2/onlyonebranch.png?raw=true) You can also see from our [Commit History](https://github.com/mrtyson93/insurancemasters/commits/main) that we only push to the main branch. The screenshot below shows that we have connected our github repository to the pipeline so that whenever main is pushed to, the pipeline is run. ![Alt text](/ProjectManagement/Sprint2/ci2.png?raw=true) The first thing it does after code is pushed to main is run the unit tests as outlined in the [app.json](https://github.com/mrtyson93/insurancemasters/blob/main/app.json) file. If those tests fail, the pipeline does not proceed, if they all pass, the pipeline proceeds. Screenshots of the tests in the pipeline are below.
+  \*Note: This section is essentially the same from the previous sprint, except updated screenshots where applicable to show our CI is still working as expected.
 
-  Successful Test![Alt text](/ProjectManagement/Sprint2/ci1.png?raw=true)
+  We are using herokus pipeline feature to implement our CI pipeline. ![Alt text](/ProjectManagement/Sprint3/ci1.png?raw=true) We only have one branch that we use which is the main branch. ![Alt text](/ProjectManagement/Sprint2/onlyonebranch.png?raw=true) You can also see from our [Commit History](https://github.com/mrtyson93/insurancemasters/commits/main) that we only push to the main branch. The screenshot below shows that we have connected our github repository to the pipeline so that whenever main is pushed to, the pipeline is run. ![Alt text](/ProjectManagement/Sprint2/ci2.png?raw=true) The first thing it does after code is pushed to main is run the unit tests and BSS test as outlined in the [app.json](https://github.com/mrtyson93/insurancemasters/blob/main/app.json) file. If those tests fail, the pipeline does not proceed, if they all pass, the pipeline proceeds. Screenshots of the tests in the pipeline are below.
 
-  Failed Test![Alt text](/ProjectManagement/Sprint2/ciFail1.png?raw=true)
+  Successful Test![Alt text](/ProjectManagement/Sprint3/ci2.png?raw=true)
+
+  Failed Test![Alt text](/ProjectManagement/Sprint3/ciFail1.png?raw=true)
 
   After the tests pass, the pipeline continues to build and then deploy the application to the correct environments. Below is a screenshot of the qa environment being built(and then deployed) after successful tests ran.![Alt text](/ProjectManagement/Sprint2/cibuild.png?raw=true)
 
 - **Continuous Delivery**:
-- (TBD updated screenshots for sprint 3)
-  We also use Heroku's pipeline feature to implement the CD portion of our pipeline. A visual of the Pipeline steps is below. The first stage builds ands deploys to our QA environment, on successful deployment of the QA environment, our production environment is built and deployed to. Finally, after production is successfully deployed to, our production tests are ran to test it is up and running.![Alt text](/ProjectManagement/Sprint2/cd1.png?raw=true) If any of these steps fail, the pipeline stops and does not proceed to further steps.
+  \*Note: This section is essentially the same from the previous sprint, except updated screenshots where applicable to show our CD is still working as expected.
+
+  We also use Heroku's pipeline feature to implement the CD portion of our pipeline. A visual of the Pipeline steps is below. The first stage builds ands deploys to our QA environment, on successful deployment of the QA environment, our production environment is built and deployed to. Finally, after production is successfully deployed to, our production tests are ran to test it is up and running.![Alt text](/ProjectManagement/Sprint3/ci1.png?raw=true) If any of these steps fail, the pipeline stops and does not proceed to further steps.
   Below is a screenshot of the build failing but the website still running to show that a failed build does not introduce a broken website. ![Alt text](/ProjectManagement/Sprint2/failedbuildstillrunning.png?raw=true)
-  Here is a screenshot of the logs of the project being successfuly built and then deployed. ![Alt text](/ProjectManagement/Sprint2/cd2.png?raw=true) After the application is successfully deployed, the final stage runs tests against the production environment that are outlined in [buildpack-run.sh](https://github.com/mrtyson93/insurancemasters/blob/main/buildpack-run.sh). The tests test two things, one that the website is up and returns a response, and that the website returns expected results in the payloag. Below is a screenshot showing a successful post deploy test ![Alt text](/ProjectManagement/Sprint2/cd3.png?raw=true) And here is a screenshot showing the post deploy tests fail ![Alt text](/ProjectManagement/Sprint2/cdpostfail.png?raw=true)
+  Here is a screenshot of the logs of the project being successfuly built and then deployed. ![Alt text](/ProjectManagement/Sprint2/cd2.png?raw=true) After the application is successfully deployed, the final stage runs tests against the production environment that are outlined in [buildpack-run.sh](https://github.com/mrtyson93/insurancemasters/blob/main/buildpack-run.sh). The tests test two things, one that the website is up and returns a response, and that the website returns expected results in the payloag. Below is a screenshot showing a successful post deploy test ![Alt text](/ProjectManagement/Sprint3/cdpostsuccess.png?raw=true) And here is a screenshot showing the post deploy tests fail ![Alt text](/ProjectManagement/Sprint2/cdpostfail.png?raw=true)
 
 - **Sprint Retro Actions:**
   - Retro Proof: TBD
