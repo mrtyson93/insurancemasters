@@ -26,7 +26,7 @@ def step_impl(context):
   #assert quote has 7 questions
   assert len(context.quote.questions) == 7
   #assert questions[0] is actually a question
-  assert type(context.quote.questions[0]) == type(Question(1,1,1))
+  assert type(context.quote.questions[0]) == type(Question("BUSINESS_AGES",1,1))
 
 @when('I choose to See Quote')
 def step_impl(context):

@@ -26,8 +26,10 @@ def certificate_load():
             insured_state = "Texas"
     if 'coverage_start_date' in session:
         coverage_start_date = session['coverage_start_date']
+    coverage_end_date = datetime.strptime(coverage_start_date, "%m/%d/%Y")
+    coverage_end_date = coverage_end_date.replace(coverage_end_date.year+1)
 
     now = datetime.now()
     return render_template('certificate.html', business_name=business_name, insured_state=insured_state,
-                           coverage_start_date=coverage_start_date, issue_date=now.strftime("%m/%d/%Y"))
+                           coverage_start_date=coverage_start_date, coverage_end_date = coverage_end_date.strftime("%m/%d/%Y"), issue_date=now.strftime("%m/%d/%Y"))
 
