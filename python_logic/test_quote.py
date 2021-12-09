@@ -65,7 +65,7 @@ class TestQuote(unittest.TestCase):
         questions = [Question("BUSINESS_AGES", "0.5", 1)]
         quote = InsuranceQuote(questions)
         quote.render_quote()
-        self.assertEqual(99, questions[0].factor)
+        self.assertEqual(1.5, questions[0].factor)
 
     def test_business_age_1_to_5_years(self):
         questions = [Question("BUSINESS_AGES", "5", 1)]

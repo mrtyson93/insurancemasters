@@ -259,11 +259,13 @@ Used points 10, 20, 30, 40, and 50 as the different size options.
 - **Continuous Integration**:
   \*Note: This section is essentially the same from the previous sprint, except updated screenshots where applicable to show our CI is still working as expected.
 
-  We are using herokus pipeline feature to implement our CI pipeline. ![Alt text](/ProjectManagement/Sprint3/ci1.png?raw=true) We only have one branch that we use which is the main branch. ![Alt text](/ProjectManagement/Sprint2/onlyonebranch.png?raw=true) You can also see from our [Commit History](https://github.com/mrtyson93/insurancemasters/commits/main) that we only push to the main branch. The screenshot below shows that we have connected our github repository to the pipeline so that whenever main is pushed to, the pipeline is run. ![Alt text](/ProjectManagement/Sprint2/ci2.png?raw=true) The first thing it does after code is pushed to main is run the unit tests and BDD test as outlined in the [app.json](https://github.com/mrtyson93/insurancemasters/blob/main/app.json) file. If those tests fail, the pipeline does not proceed, if they all pass, the pipeline proceeds. Screenshots of the tests in the pipeline are below.
+  We are using herokus pipeline feature to implement our CI pipeline. ![Alt text](/ProjectManagement/Sprint3/ci1.png?raw=true) We only have one branch that we use which is the main branch. ![Alt text](/ProjectManagement/Sprint2/onlyonebranch.png?raw=true) You can also see from our [Commit History](https://github.com/mrtyson93/insurancemasters/commits/main) that we only push to the main branch. The screenshot below shows that we have connected our github repository to the pipeline so that whenever main is pushed to, the pipeline is run. ![Alt text](/ProjectManagement/Sprint2/ci2.png?raw=true) The first thing it does after code is pushed to main is run the unit tests and BDD test as outlined in the [app.json](https://github.com/mrtyson93/insurancemasters/blob/main/app.json) file. If those tests fail, the pipeline does not proceed, if they all pass, the pipeline proceeds. Screenshots of the tests in the pipeline are below with example of successful and failed BDD and unit tests.
 
   Successful Test![Alt text](/ProjectManagement/Sprint3/ci2.png?raw=true)
 
-  Failed Test![Alt text](/ProjectManagement/Sprint3/ciFail1.png?raw=true)
+  Failed BDD Test![Alt text](/ProjectManagement/Sprint3/ciFail1.png?raw=true)
+
+  Failed Unit Test![Alt text](/ProjectManagement/Sprint3/cifailunittest.png?raw=true)
 
   After the tests pass, the pipeline continues to build and then deploy the application to the correct environments. Below is a screenshot of the qa environment being built(and then deployed) after successful tests ran.![Alt text](/ProjectManagement/Sprint2/cibuild.png?raw=true)
 
