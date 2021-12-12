@@ -277,7 +277,10 @@ Used points 10, 20, 30, 40, and 50 as the different size options.
   Here is a screenshot of the logs of the project being successfuly built and then deployed. ![Alt text](/ProjectManagement/Sprint2/cd2.png?raw=true) After the application is successfully deployed, the final stage runs tests against the production environment that are outlined in [buildpack-run.sh](https://github.com/mrtyson93/insurancemasters/blob/main/buildpack-run.sh). The tests test two things, one that the website is up and returns a response, and that the website returns expected results in the payloag. Below is a screenshot showing a successful post deploy test ![Alt text](/ProjectManagement/Sprint3/cdpostsuccess.png?raw=true) And here is a screenshot showing the post deploy tests fail ![Alt text](/ProjectManagement/Sprint2/cdpostfail.png?raw=true)
 
 - **Sprint Retro Actions:**
-  - Retro Proof: TBD
+
+  - Occured on 12/12/2021 in continuation from class:
+    Proof ![Alt text](/ProjectManagement/Sprint3/retro.png?raw=true)
+  - Retry Change: We need to manage time conflicts better, so the change is to create shared calendars so we can see free timeslots between evereyone. This task is at the top of the next sprints backlog. Proof below. ![Alt text](/ProjectManagement/Sprint3/retroaddeditem.png?raw=true)
 
 -**Other**: Because we have also added BDD into our CI/CD Pipeline we process we modified our Definition of Done as follows:
 
