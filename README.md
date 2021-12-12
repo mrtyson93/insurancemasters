@@ -282,6 +282,10 @@ Used points 10, 20, 30, 40, and 50 as the different size options.
     Proof ![Alt text](/ProjectManagement/Sprint3/retro.png?raw=true)
   - Retro Change: We need to manage time conflicts better, so the change is to create shared calendars so we can see free timeslots between evereyone. This task is at the top of the next sprints backlog. Proof below. ![Alt text](/ProjectManagement/Sprint3/retroaddeditem.png?raw=true)
 
+- **Sprint Review Rehearsal:**
+
+  - Occured on 12/12/2021. Proof below: ![Alt text](/ProjectManagement/Sprint3/sprintreviewrehearsal.png?raw=true)
+
 -**Other**: Because we have also added BDD into our CI/CD Pipeline we process we modified our Definition of Done as follows:
 
 - All related backlog items to user story are done
