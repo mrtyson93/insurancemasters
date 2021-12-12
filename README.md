@@ -278,3 +278,14 @@ Used points 10, 20, 30, 40, and 50 as the different size options.
 
 - **Sprint Retro Actions:**
   - Retro Proof: TBD
+
+-**Other**: Because we have also added BDD into our CI/CD Pipeline we process we modified our Definition of Done as follows:
+
+- All related backlog items to user story are done
+- Product owner approval
+- Acceptance criteria met for each story
+- New unit tests passed
+- No bugs introduced, all prior tests still pass
+- When code is committed, CI/CD pipeline successfully runs and deploys the new code
+- Production environment has new changes deployed
+- NEW: BDD Tests written and passed
