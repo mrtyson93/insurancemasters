@@ -286,6 +286,10 @@ Used points 10, 20, 30, 40, and 50 as the different size options.
 
   - Occured on 12/12/2021. Proof below: ![Alt text](/ProjectManagement/Sprint3/sprintreviewrehearsal.png?raw=true)
 
+- **Sprint Review:**
+
+  - Occured on 12/13/2021 In class. Added Value proposition PBI to sprint 4 backlog based off feedback ![Alt text](/ProjectManagement/Sprint3/reviewfeedback.png?raw=true)
+
 -**Other**: Because we have also added BDD into our CI/CD Pipeline we process we modified our Definition of Done as follows:
 
 - All related backlog items to user story are done
